@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONG_SomosMas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.debug.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.debug.xcconfig"; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		86D73744285A968A00D03423 /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
 		86D73748285A96D200D03423 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				86BA8914285A930200323B8C /* ONG-SomosMas */,
 				86BA8913285A930200323B8C /* Products */,
+				E63DF5D5914B909A9170CC58 /* Pods */,
+				DAA30F193D1B68EEF243FF91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +137,24 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		DAA30F193D1B68EEF243FF91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E63DF5D5914B909A9170CC58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */,
+				89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86BA8926285A930400323B8C /* Build configuration list for PBXNativeTarget "ONG-SomosMas" */;
 			buildPhases = (
+				72C77B79D1695CBE4039C549 /* [CP] Check Pods Manifest.lock */,
 				86BA890E285A930200323B8C /* Sources */,
 				86BA890F285A930200323B8C /* Frameworks */,
 				86BA8910285A930200323B8C /* Resources */,
+				DF3DF78F3EC16D5485132FA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +222,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72C77B79D1695CBE4039C549 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONG-SomosMas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3DF78F3EC16D5485132FA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86BA890E285A930200323B8C /* Sources */ = {
@@ -350,6 +419,7 @@
 		};
 		86BA8927285A930400323B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +448,7 @@
 		};
 		86BA8928285A930400323B8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
