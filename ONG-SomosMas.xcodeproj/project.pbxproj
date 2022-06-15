@@ -13,6 +13,11 @@
 		86BA891D285A930200323B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BA891B285A930200323B8C /* Main.storyboard */; };
 		86BA891F285A930400323B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BA891E285A930400323B8C /* Assets.xcassets */; };
 		86BA8922285A930400323B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8920285A930400323B8C /* LaunchScreen.storyboard */; };
+		86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */; };
+		86D73743285A965300D03423 /* DataClassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73742285A965300D03423 /* DataClassResponse.swift */; };
+		86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73744285A968A00D03423 /* ErrorsResponse.swift */; };
+		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
+		86D73749285A96D200D03423 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73748285A96D200D03423 /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		86BA891E285A930400323B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BA8921285A930400323B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BA8923285A930400323B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONGServiceAPIRest.swift; sourceTree = "<group>"; };
+		86D73742285A965300D03423 /* DataClassResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClassResponse.swift; sourceTree = "<group>"; };
+		86D73744285A968A00D03423 /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
+		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
+		86D73748285A96D200D03423 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		86BA8914285A930200323B8C /* ONG-SomosMas */ = {
 			isa = PBXGroup;
 			children = (
+				86D7373F285A959A00D03423 /* Service */,
 				86BA8915285A930200323B8C /* AppDelegate.swift */,
 				86BA8917285A930200323B8C /* SceneDelegate.swift */,
 				86BA8919285A930200323B8C /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				86BA8923285A930400323B8C /* Info.plist */,
 			);
 			path = "ONG-SomosMas";
+			sourceTree = "<group>";
+		};
+		86D7373F285A959A00D03423 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */,
+				86D73742285A965300D03423 /* DataClassResponse.swift */,
+				86D73744285A968A00D03423 /* ErrorsResponse.swift */,
+				86D73746285A96B000D03423 /* RegistryResponse.swift */,
+				86D73748285A96D200D03423 /* UserResponse.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
+				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
+				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
+				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
+				86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
