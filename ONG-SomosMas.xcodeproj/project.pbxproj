@@ -66,6 +66,11 @@
 		86BA8914285A930200323B8C /* ONG-SomosMas */ = {
 			isa = PBXGroup;
 			children = (
+				86D73750285A979000D03423 /* Enum */,
+				86D7374F285A978800D03423 /* Model */,
+				86D7374E285A977000D03423 /* Controler */,
+				86D7374D285A976000D03423 /* Manager */,
+				86D7374A285A973200D03423 /* UI */,
 				86D7373F285A959A00D03423 /* Service */,
 				86BA8915285A930200323B8C /* AppDelegate.swift */,
 				86BA8917285A930200323B8C /* SceneDelegate.swift */,
@@ -88,6 +93,41 @@
 				86D73748285A96D200D03423 /* UserResponse.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		86D7374A285A973200D03423 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		86D7374D285A976000D03423 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		86D7374E285A977000D03423 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controler;
+			sourceTree = "<group>";
+		};
+		86D7374F285A978800D03423 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		86D73750285A979000D03423 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
