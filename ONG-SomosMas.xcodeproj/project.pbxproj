@@ -19,6 +19,7 @@
 		86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73744285A968A00D03423 /* ErrorsResponse.swift */; };
 		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
 		86D73749285A96D200D03423 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73748285A96D200D03423 /* UserResponse.swift */; };
+		86EBCFC8285AD25700538BB0 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBCFC7285AD25700538BB0 /* WelcomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		86D73744285A968A00D03423 /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
 		86D73748285A96D200D03423 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		86EBCFC7285AD25700538BB0 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		86D7374D285A976000D03423 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				86EBCFC7285AD25700538BB0 /* WelcomePageViewController.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -151,7 +154,6 @@
 				5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */,
 				89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -274,6 +276,7 @@
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
 				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
+				86EBCFC8285AD25700538BB0 /* WelcomePageViewController.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
