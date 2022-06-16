@@ -87,6 +87,7 @@
 				86BA891B285A930200323B8C /* Main.storyboard */,
 				86BA891E285A930400323B8C /* Assets.xcassets */,
 				86BA8920285A930400323B8C /* LaunchScreen.storyboard */,
+				86EBCFC7285AD25700538BB0 /* WelcomePageViewController.swift */,
 				86BA8923285A930400323B8C /* Info.plist */,
 			);
 			path = "ONG-SomosMas";
@@ -114,7 +115,6 @@
 		86D7374D285A976000D03423 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				86EBCFC7285AD25700538BB0 /* WelcomePageViewController.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
