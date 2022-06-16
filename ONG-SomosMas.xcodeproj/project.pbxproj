@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */; };
+		8607917D285BC14D0087CA2C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607917C285BC14D0087CA2C /* RegisterViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONG_SomosMas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.debug.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.debug.xcconfig"; sourceTree = "<group>"; };
+		8607917C285BC14D0087CA2C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8607917B285BC0F00087CA2C /* TMP */ = {
+			isa = PBXGroup;
+			children = (
+				8607917C285BC14D0087CA2C /* RegisterViewController.swift */,
+			);
+			path = TMP;
+			sourceTree = "<group>";
+		};
 		86BA8909285A930100323B8C = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		86BA8914285A930200323B8C /* ONG-SomosMas */ = {
 			isa = PBXGroup;
 			children = (
+				8607917B285BC0F00087CA2C /* TMP */,
 				86D73750285A979000D03423 /* Enum */,
 				86D7374F285A978800D03423 /* Model */,
 				86D7374E285A977000D03423 /* Controler */,
@@ -151,7 +162,6 @@
 				5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */,
 				89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -270,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8607917D285BC14D0087CA2C /* RegisterViewController.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
