@@ -104,9 +104,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nlu-XQ-g6r" secondAttribute="trailing" constant="30" id="y12-k3-sjt"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="itemButton" destination="nlu-XQ-g6r" id="3Oi-JA-nPp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
