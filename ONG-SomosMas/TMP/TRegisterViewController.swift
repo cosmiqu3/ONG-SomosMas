@@ -51,6 +51,7 @@ class TRegisterViewController: UIViewController {
         @IBAction func onTabNews(_ sender: Any) {
             
             api.news(complete: didGetNews)
+         
             
         }
         
@@ -58,7 +59,14 @@ class TRegisterViewController: UIViewController {
         func didGetNews(_ status: Int, _ response : NewsResponse?) {
                 print("Callback didGetNews")
                 print("code    : \(status)")
-                debugPrint(response)
+            debugPrint(response?.data)
+            
+            response?.data.forEach{ dat in
+                print("nombre :\(dat.name)")
+                print("contenido: \(dat.content)")
+                print("imagen: \(dat.image!)")
+                print("------")
+            }
         }
     
 

@@ -64,7 +64,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get News"/>
                                 <connections>
-                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="42f-Bj-En5"/>
                                     <action selector="onTabNews:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="xTD-MY-bO3"/>
                                 </connections>
                             </button>
