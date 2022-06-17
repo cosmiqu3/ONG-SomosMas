@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fCd-1u-yQ2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="31"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="PFR-Hj-yCs">
+            <objects>
+                <viewController id="fCd-1u-yQ2" customClass="RegisterViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zsf-Zg-gpf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcI-G3-K5i">
+                                <rect key="frame" x="109" y="368" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="onTapRegister:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="IVs-NR-QMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk3-eg-bWf">
+                                <rect key="frame" x="109" y="252" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Testimonio"/>
+                                <connections>
+                                    <segue destination="Yng-ka-0MH" kind="show" id="obF-Ex-Ydr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-gF-i5B">
+                                <rect key="frame" x="109" y="417" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Testimonials"/>
+                                <connections>
+                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="nO9-3e-KNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-HB-NcA">
+                                <rect key="frame" x="109" y="464" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get News"/>
+                                <connections>
+                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="42f-Bj-En5"/>
+                                    <action selector="onTabNews:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="xTD-MY-bO3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sti-Ye-ONH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q23-VH-W91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705.79710144927537" y="28.794642857142854"/>
+        </scene>
+        <!--Testimonials View Controller-->
+        <scene sceneID="G38-3x-e3R">
+            <objects>
+                <viewController id="Yng-ka-0MH" customClass="TestimonialsViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0xB-YS-ci9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testimonios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-eg-Zbm">
+                                <rect key="frame" x="20" y="172" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-6g-UHJ">
+                                <rect key="frame" x="129" y="54" width="156" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="tLh-ln-L9d"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-ot-3cd">
+                                <rect key="frame" x="30" y="691" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wPw-Hd-4QK"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Agregar mi testimonio" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lista_testimonios" translatesAutoresizingMaskIntoConstraints="NO" id="Ksg-2L-mZV">
+                                <rect key="frame" x="20" y="223" width="374" height="458"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WPg-oH-vTu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JdC-6g-UHJ" firstAttribute="leading" secondItem="WPg-oH-vTu" secondAttribute="leading" constant="129" id="8AN-zF-lrd"/>
+                            <constraint firstItem="7vg-ot-3cd" firstAttribute="top" secondItem="Ksg-2L-mZV" secondAttribute="bottom" constant="10" id="LFT-bg-7jK"/>
+                            <constraint firstItem="JdC-6g-UHJ" firstAttribute="top" secondItem="WPg-oH-vTu" secondAttribute="top" constant="10" id="SY6-vo-Gsy"/>
+                            <constraint firstItem="JdC-6g-UHJ" firstAttribute="centerX" secondItem="Mtj-eg-Zbm" secondAttribute="centerX" id="T6i-1d-uBE"/>
+                            <constraint firstItem="Mtj-eg-Zbm" firstAttribute="top" secondItem="JdC-6g-UHJ" secondAttribute="bottom" constant="15" id="cVt-Ss-Dv5"/>
+                            <constraint firstItem="Mtj-eg-Zbm" firstAttribute="leading" secondItem="WPg-oH-vTu" secondAttribute="leading" constant="20" id="eqf-x9-frJ"/>
+                            <constraint firstItem="Ksg-2L-mZV" firstAttribute="leading" secondItem="WPg-oH-vTu" secondAttribute="leading" constant="20" id="mu0-dL-yJE"/>
+                            <constraint firstItem="7vg-ot-3cd" firstAttribute="leading" secondItem="WPg-oH-vTu" secondAttribute="leading" constant="30" id="oGl-Tx-9nk"/>
+                            <constraint firstItem="WPg-oH-vTu" firstAttribute="trailing" secondItem="Ksg-2L-mZV" secondAttribute="trailing" constant="20" id="shG-wo-F1t"/>
+                            <constraint firstItem="WPg-oH-vTu" firstAttribute="trailing" secondItem="Mtj-eg-Zbm" secondAttribute="trailing" constant="20" id="xk3-vv-tZ9"/>
+                            <constraint firstItem="Ksg-2L-mZV" firstAttribute="top" secondItem="Mtj-eg-Zbm" secondAttribute="bottom" constant="15" id="y5I-y4-z1N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPu-5A-9qT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f72-x1-Y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447.8260869565217" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LOGO-SOMOS MAS" width="200" height="200"/>
+        <image name="lista_testimonios" width="341" height="458"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
