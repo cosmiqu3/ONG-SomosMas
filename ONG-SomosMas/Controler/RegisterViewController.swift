@@ -149,7 +149,8 @@ class RegisterViewController: UIViewController {
     
     
     func restarForm() {
-        registerButton.isEnabled = false
+        changeStateRegisterButton(false)
+        
         emailStatus = false
         passwordStatus = false
         repeatPasswordStatus = false
@@ -160,11 +161,42 @@ class RegisterViewController: UIViewController {
         
     }
     
+    func changeStateRegisterButton(_ state: Bool) {
+        registerButton.isEnabled = state
+        if state {
+            registerButton.backgroundColor = getUIColor(hex: "#FF0000")
+        } else {
+            registerButton.backgroundColor = getUIColor(hex: "#CBCBCB")
+        }
+    }
+    
+    func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
+        var cleanString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cleanString.hasPrefix("#")) {
+            cleanString.remove(at: cleanString.startIndex)
+        }
+
+        if ((cleanString.count) != 6) {
+            return nil
+        }
+
+        var rgbValue: UInt32 = 0
+        Scanner(string: cleanString).scanHexInt32(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
     func checkValidForm() {
         if emailStatus, passwordStatus,  repeatPasswordStatus {
-            registerButton.isEnabled = true ///el boton esta habilitado
+            changeStateRegisterButton(true) ///el boton esta habilitado
         }else {
-            registerButton.isEnabled = false
+            changeStateRegisterButton(false)
         }
     }
     

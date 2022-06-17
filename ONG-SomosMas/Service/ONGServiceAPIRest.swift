@@ -93,13 +93,16 @@ class ONGServiceAPIRest {
                 
                 if (testimonialsResponse.success ?? false) {
                     complete(0, testimonialsResponse)
+                    return
                 } else {
                     complete(-1,nil)
+                    return
                 }
                
             } catch let error {
                 print(error)
                 complete(3, nil)
+                return
             }
          }
     }
@@ -132,13 +135,16 @@ class ONGServiceAPIRest {
                 
                 if (newsResponse.success ?? false) {
                     complete(0, newsResponse)
+                    return
                 } else {
                     complete(-1,nil)
+                    return
                 }
                
             } catch let error {
                 print(error)
                 complete(3, nil)
+                return
             }
          }
     }
