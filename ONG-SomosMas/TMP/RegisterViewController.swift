@@ -37,12 +37,26 @@ class RegisterViewController: UIViewController {
     
     @IBAction func onTabGetTestimonials(_ sender: Any) {
         
-        
-        api.testimonials(complete: didGetUserTestimonials)
+        api.testimonials(complete: didGetTestimonials)
     }
     
-    func didGetUserTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
+    func didGetTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
             print("Callback didGetUserTestimonials")
+            print("code    : \(status)")
+            debugPrint(response)
+    }
+    
+    
+    
+    @IBAction func onTabNews(_ sender: Any) {
+        
+        api.news(complete: didGetNews)
+        
+    }
+    
+    
+    func didGetNews(_ status: Int, _ response : NewsResponse?) {
+            print("Callback didGetNews")
             print("code    : \(status)")
             debugPrint(response)
     }

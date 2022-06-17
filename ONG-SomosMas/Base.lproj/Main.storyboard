@@ -32,31 +32,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcI-G3-K5i">
-                                <rect key="frame" x="115" y="307" width="185" height="31"/>
+                                <rect key="frame" x="109" y="368" width="185" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
                                 <connections>
                                     <action selector="onTapRegister:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="IVs-NR-QMd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk3-eg-bWf">
-                                <rect key="frame" x="115" y="360" width="185" height="31"/>
+                                <rect key="frame" x="109" y="252" width="185" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Testimonio"/>
                                 <connections>
-                                    <action selector="onTapRegister:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="ALu-4C-vBi"/>
                                     <segue destination="Yng-ka-0MH" kind="show" id="obF-Ex-Ydr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-gF-i5B">
-                                <rect key="frame" x="115" y="417" width="185" height="31"/>
+                                <rect key="frame" x="109" y="417" width="185" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Testimonio"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Testimonials"/>
                                 <connections>
-                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="51O-PI-oj1"/>
+                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="nO9-3e-KNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-HB-NcA">
+                                <rect key="frame" x="109" y="464" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get News"/>
+                                <connections>
+                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="42f-Bj-En5"/>
+                                    <action selector="onTabNews:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="xTD-MY-bO3"/>
                                 </connections>
                             </button>
                         </subviews>

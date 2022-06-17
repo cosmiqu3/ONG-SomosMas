@@ -100,5 +100,44 @@ class ONGServiceAPIRest {
             }
          }
     }
+    
+    
+    //MARK: Method
+    func news(complete : @escaping (_ status: Int, _ response : NewsResponse?) -> ()) {
+        
+        AF.request("\(url_base)/news").response { response in
+            
+            print ("response:")
+            debugPrint(response)
+            
+            if response.error != nil {
+                complete(1,nil)
+                return
+            }
+
+            guard let data = response.data else {
+                complete(2,nil)
+                return
+            }
+            
+            do {
+                let newsResponse = try JSONDecoder().decode(NewsResponse.self, from: data)
+                print("*** resultado ***\n")
+                print("success: \(newsResponse.success ?? false)")
+                print("message: \(newsResponse.message)")
+                print("data   : \(newsResponse.data)")
+                
+                if (newsResponse.success ?? false) {
+                    complete(0, newsResponse)
+                } else {
+                    complete(-1,nil)
+                }
+               
+            } catch let error {
+                print(error)
+                complete(3, nil)
+            }
+         }
+    }
 }
 
