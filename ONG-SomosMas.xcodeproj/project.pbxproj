@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */; };
-		8607917F285BD90B0087CA2C /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607917E285BD90B0087CA2C /* TestimonialsViewController.swift */; };
 		86079181285BDC7A0087CA2C /* DatumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079180285BDC7A0087CA2C /* DatumResponse.swift */; };
 		86079183285BDE470087CA2C /* TestimonialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079182285BDE470087CA2C /* TestimonialsResponse.swift */; };
 		86079185285C1DD40087CA2C /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079184285C1DD40087CA2C /* NewsResponse.swift */; };
 		86079187285C1EA40087CA2C /* DatumNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079186285C1EA40087CA2C /* DatumNewsResponse.swift */; };
 		8607918A285C46D50087CA2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86079188285C46D40087CA2C /* Main.storyboard */; };
+		8607918F285C493D0087CA2C /* TRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607918E285C493D0087CA2C /* TRegisterViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -30,12 +30,12 @@
 /* Begin PBXFileReference section */
 		4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONG_SomosMas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.debug.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.debug.xcconfig"; sourceTree = "<group>"; };
-		8607917E285BD90B0087CA2C /* TestimonialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
 		86079180285BDC7A0087CA2C /* DatumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumResponse.swift; sourceTree = "<group>"; };
 		86079182285BDE470087CA2C /* TestimonialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsResponse.swift; sourceTree = "<group>"; };
 		86079184285C1DD40087CA2C /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		86079186285C1EA40087CA2C /* DatumNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumNewsResponse.swift; sourceTree = "<group>"; };
 		86079189285C46D50087CA2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8607918E285C493D0087CA2C /* TRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRegisterViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		8607917B285BC0F00087CA2C /* TMP */ = {
 			isa = PBXGroup;
 			children = (
-				8607917E285BD90B0087CA2C /* TestimonialsViewController.swift */,
+				8607918E285C493D0087CA2C /* TRegisterViewController.swift */,
 			);
 			path = TMP;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				86079181285BDC7A0087CA2C /* DatumResponse.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
-				8607917F285BD90B0087CA2C /* TestimonialsViewController.swift in Sources */,
+				8607918F285C493D0087CA2C /* TRegisterViewController.swift in Sources */,
 				86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

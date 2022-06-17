@@ -26,7 +26,7 @@
         <!--Register View Controller-->
         <scene sceneID="PFR-Hj-yCs">
             <objects>
-                <viewController id="fCd-1u-yQ2" customClass="RegisterViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fCd-1u-yQ2" customClass="TRegisterViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zsf-Zg-gpf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="705.79710144927537" y="28.794642857142854"/>
         </scene>
-        <!--Testimonials View Controller-->
+        <!--View Controller-->
         <scene sceneID="G38-3x-e3R">
             <objects>
-                <viewController id="Yng-ka-0MH" customClass="TestimonialsViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yng-ka-0MH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xB-YS-ci9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
