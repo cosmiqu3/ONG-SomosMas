@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ddx-rO-xo7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pm6-fF-9pA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -29,17 +29,18 @@
                         <viewLayoutGuide key="safeArea" id="I0S-in-5hb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zp9-wA-Yfg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig0-da-zY0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1320.289855072464" y="193.52678571428569"/>
+            <point key="canvasLocation" x="-410.14492753623193" y="193.52678571428569"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="WkP-Pq-HoJ">
             <objects>
                 <viewController id="0qT-Yr-toC" customClass="ContactoViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1X5-NV-XPl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Quieres contribuir?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-36-t1t">
@@ -111,14 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c4-Vm-ZgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="sjH-H7-qd6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2141" y="-113"/>
+            <point key="canvasLocation" x="3050.7246376811595" y="-113.16964285714285"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="el8-wf-pfS">
             <objects>
                 <viewController id="16Y-Jb-1hI" customClass="LoginViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fqe-H7-2Ph">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-r5-rBT">
@@ -175,14 +176,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDg-0J-QM9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291.304347826087" y="193.52678571428569"/>
+            <point key="canvasLocation" x="618.84057971014499" y="193.52678571428569"/>
         </scene>
         <!--Welcome Page View Controller-->
         <scene sceneID="n6x-gk-p0M">
             <objects>
                 <viewController id="TTs-vI-iSa" customClass="WelcomePageViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7te-V8-im4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-VD-zQp">
@@ -253,18 +254,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vci-cB-dEt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="-112"/>
+            <point key="canvasLocation" x="1673.913043478261" y="-112.5"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="xFD-du-sar">
             <objects>
                 <viewController id="Ugs-NY-Tuj" customClass="RegisterViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hzx-b7-hqr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Email" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Z5E-fy-V5T">
-                                <rect key="frame" x="30" y="549" width="354" height="50"/>
+                                <rect key="frame" x="30" y="593" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SGX-Zd-Xri"/>
                                 </constraints>
@@ -275,7 +276,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-97-j1n">
-                                <rect key="frame" x="30" y="614" width="354" height="50"/>
+                                <rect key="frame" x="30" y="658" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TFS-f9-KzW"/>
                                 </constraints>
@@ -286,7 +287,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Repite la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-nU-KhC">
-                                <rect key="frame" x="30" y="679" width="354" height="50"/>
+                                <rect key="frame" x="30" y="723" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AUD-Po-KVf"/>
                                 </constraints>
@@ -298,7 +299,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="   Nombre y Apellido" adjustsFontSizeToFit="NO" minimumFontSize="21" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-8w-F1Y">
-                                <rect key="frame" x="30" y="484" width="354" height="50"/>
+                                <rect key="frame" x="30" y="528" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="b2v-Tv-nZx"/>
                                 </constraints>
@@ -306,7 +307,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bW-Kz-hea">
-                                <rect key="frame" x="30" y="759" width="354" height="50"/>
+                                <rect key="frame" x="30" y="803" width="354" height="50"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <rect key="contentStretch" x="0.20000000000000001" y="0.0" width="1" height="1"/>
                                 <constraints>
@@ -328,13 +329,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ya tienes cuenta? Ingresa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1g-rs-PSp">
-                                <rect key="frame" x="30" y="819" width="354" height="21"/>
+                                <rect key="frame" x="30" y="863" width="354" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="vir-Ev-TSJ">
-                                <rect key="frame" x="30" y="84" width="354" height="200"/>
+                                <rect key="frame" x="30" y="128" width="354" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-5C-o8l">
                                 <rect key="frame" x="30" y="589" width="354" height="17"/>
@@ -399,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieg-G4-M6W" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763.768115942029" y="606.69642857142856"/>
+            <point key="canvasLocation" x="1673.913043478261" y="606.69642857142856"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="sGc-YL-tck">
@@ -456,7 +457,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dd3-0a-Fsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="607"/>
+            <point key="canvasLocation" x="2739.130434782609" y="606.69642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MTn-Fd-RwT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pm6-fF-9pA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ar8-JY-Vyu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ddx-rO-xo7" kind="relationship" relationship="rootViewController" id="box-b3-BKR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhk-cs-8Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1320.289855072464" y="193.52678571428569"/>
         </scene>
     </scenes>
     <resources>

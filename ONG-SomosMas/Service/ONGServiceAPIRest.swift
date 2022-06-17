@@ -52,13 +52,16 @@ class ONGServiceAPIRest {
                 
                 if (registryResponse.success ?? false) {
                     complete(0,registryResponse.message)
+                    return
                 } else {
                     complete(-1,registryResponse.message)
+                    return
                 }
                
             } catch let error {
                 print(error)
                 complete(3,"error al leer contenido")
+                return
             }
          }
     }

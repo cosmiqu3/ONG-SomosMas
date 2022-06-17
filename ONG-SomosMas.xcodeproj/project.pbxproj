@@ -17,6 +17,7 @@
 		86079191285C4AAA0087CA2C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079190285C4AAA0087CA2C /* RegisterViewController.swift */; };
 		86079193285C4ABE0087CA2C /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079192285C4ABE0087CA2C /* ContactoViewController.swift */; };
 		86079195285C4AF20087CA2C /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86079194285C4AF20087CA2C /* WelcomePageViewController.swift */; };
+		86598083285C57B600D30573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598082285C57B600D30573 /* LoginViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		86079190285C4AAA0087CA2C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		86079192285C4ABE0087CA2C /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		86079194285C4AF20087CA2C /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		86598082285C57B600D30573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				86079190285C4AAA0087CA2C /* RegisterViewController.swift */,
 				86079192285C4ABE0087CA2C /* ContactoViewController.swift */,
 				86079194285C4AF20087CA2C /* WelcomePageViewController.swift */,
+				86598082285C57B600D30573 /* LoginViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86598083285C57B600D30573 /* LoginViewController.swift in Sources */,
 				86079187285C1EA40087CA2C /* DatumNewsResponse.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
 				86079195285C4AF20087CA2C /* WelcomePageViewController.swift in Sources */,

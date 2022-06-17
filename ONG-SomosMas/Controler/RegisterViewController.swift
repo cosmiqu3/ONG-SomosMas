@@ -69,7 +69,82 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func onTapRegister(_ sender: Any) {
-        restarForm()
+        //restarForm()
+        
+        registerButton.isEnabled = false
+        
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
+        
+        if let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text  {
+            
+            api.register(name: name,
+                         email: email,
+                         password: password,
+                         complete: didGetUserRegister)
+        } else {
+            registerButton.isEnabled = true
+        }
+    }
+    
+    func didGetUserRegister(code: Int, messsage: String) {
+        
+        print("Callback didGetUserRegister")
+        print("code    : \(code)")
+        print("messsage: \(messsage)")
+        
+        if code == 0 {
+            successfulAlertMessage(messsage, complete: didBackLogin)
+        } else {
+            registerButton.isEnabled = true
+            errorAlertMessage(messsage)
+        }
+    }
+    
+    func didBackLogin() {
+        
+        print("Callback didBackLogin")
+
+        let loginViewController = self.navigationController?.viewControllers.first(where: { viewController in
+            if viewController is LoginViewController {
+                return true
+            } else {
+                return false
+            }
+        })
+        if let vController = loginViewController {
+            self.navigationController?.popToViewController(vController, animated: true)
+        }
+    }
+    
+    func successfulAlertMessage(_ mensaje: String, complete : @escaping () -> ()) {
+        // create the alert
+        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {
+            (action: UIAlertAction!) in
+            complete()
+            return
+        }))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func successfulAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func errorAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     
