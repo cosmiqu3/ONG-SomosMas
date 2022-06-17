@@ -8,6 +8,9 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    let api: ONGServiceAPIRest = ONGServiceAPIRest()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +18,10 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
 
     @IBAction func onTapRegister(_ sender: Any) {
         
-        let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
         api.register(name: "juan prado", email: "juanprado1@gmail.com", password: "123456", complete: didGetUserRegister)
     }
@@ -29,6 +32,19 @@ class RegisterViewController: UIViewController {
             print("messsage: \(messsage)")
             
             //dependiendo de respuesta agregar logica en ViewController
+    }
+    
+    
+    @IBAction func onTabGetTestimonials(_ sender: Any) {
+        
+        
+        api.testimonials(complete: didGetUserTestimonials)
+    }
+    
+    func didGetUserTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
+            print("Callback didGetUserTestimonials")
+            print("code    : \(status)")
+            debugPrint(response)
     }
     
     /*

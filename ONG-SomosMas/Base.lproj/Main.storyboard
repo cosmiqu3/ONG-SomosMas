@@ -50,6 +50,15 @@
                                     <segue destination="Yng-ka-0MH" kind="show" id="obF-Ex-Ydr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-gF-i5B">
+                                <rect key="frame" x="115" y="417" width="185" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Testimonio"/>
+                                <connections>
+                                    <action selector="onTabGetTestimonials:" destination="fCd-1u-yQ2" eventType="touchUpInside" id="51O-PI-oj1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sti-Ye-ONH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

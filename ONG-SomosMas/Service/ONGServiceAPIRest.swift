@@ -62,5 +62,43 @@ class ONGServiceAPIRest {
             }
          }
     }
+    
+    //MARK: Method
+    func testimonials(complete : @escaping (_ status: Int, _ response : TestimonialsResponse?) -> ()) {
+        
+        AF.request("\(url_base)/testimonials").response { response in
+            
+            print ("response:")
+            debugPrint(response)
+            
+            if response.error != nil {
+                complete(1,nil)
+                return
+            }
+
+            guard let data = response.data else {
+                complete(2,nil)
+                return
+            }
+            
+            do {
+                let testimonialsResponse = try JSONDecoder().decode(TestimonialsResponse.self, from: data)
+                print("*** resultado ***\n")
+                print("success: \(testimonialsResponse.success ?? false)")
+                print("message: \(testimonialsResponse.message)")
+                print("data   : \(testimonialsResponse.data)")
+                
+                if (testimonialsResponse.success ?? false) {
+                    complete(0, testimonialsResponse)
+                } else {
+                    complete(-1,nil)
+                }
+               
+            } catch let error {
+                print(error)
+                complete(3, nil)
+            }
+         }
+    }
 }
 
