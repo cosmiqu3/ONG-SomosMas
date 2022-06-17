@@ -113,16 +113,16 @@
             </objects>
             <point key="canvasLocation" x="2141" y="-113"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="6oG-2B-8rE">
             <objects>
-                <viewController id="p6z-Km-1cN" customClass="ViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p6z-Km-1cN" customClass="LoginViewController" customModule="ONG_SomosMas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9rp-ek-HhP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-BH-h74">
-                                <rect key="frame" x="29" y="508" width="365" height="34"/>
+                                <rect key="frame" x="29" y="497" width="365" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKn-7O-bcA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="194"/>
+            <point key="canvasLocation" x="-291.304347826087" y="193.52678571428569"/>
         </scene>
         <!--Welcome Page View Controller-->
         <scene sceneID="63w-PE-xL7">
@@ -270,6 +270,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="cA5-K7-3bt"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76Y-0u-GzK">
                                 <rect key="frame" x="30" y="614" width="354" height="50"/>
@@ -278,6 +281,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="DrA-Ut-LjY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Repite la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMy-Th-Aaw">
                                 <rect key="frame" x="30" y="679" width="354" height="50"/>
@@ -287,6 +293,9 @@
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="10" trailing="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="repeatPasswordChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="j9H-OS-0YY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="   Nombre y Apellido" adjustsFontSizeToFit="NO" minimumFontSize="21" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ktf-4Y-Oud">
                                 <rect key="frame" x="30" y="484" width="354" height="50"/>
@@ -314,6 +323,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onTapRegister:" destination="pW8-MM-lmJ" eventType="touchUpInside" id="TUf-bF-SlB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ya tienes cuenta? Ingresa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-dh-SAh">
                                 <rect key="frame" x="30" y="819" width="354" height="21"/>
@@ -324,6 +336,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="PJ7-vP-NGG">
                                 <rect key="frame" x="30" y="84" width="354" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-zn-rOp">
+                                <rect key="frame" x="30" y="589" width="354" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-sG-Jbx">
+                                <rect key="frame" x="30" y="672" width="354" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-yN-fQo">
+                                <rect key="frame" x="32" y="726" width="352" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ap1-Vt-tqW"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -345,6 +378,7 @@
                             <constraint firstItem="z21-6O-GxM" firstAttribute="leading" secondItem="Ap1-Vt-tqW" secondAttribute="leading" constant="30" id="aUx-jg-zhm"/>
                             <constraint firstItem="PJ7-vP-NGG" firstAttribute="leading" secondItem="Ap1-Vt-tqW" secondAttribute="leading" constant="30" id="bgz-Uf-kx2"/>
                             <constraint firstItem="Ap1-Vt-tqW" firstAttribute="trailing" secondItem="z21-6O-GxM" secondAttribute="trailing" constant="30" id="c8j-qh-qh3"/>
+                            <constraint firstItem="76Y-0u-GzK" firstAttribute="centerX" secondItem="Ap1-Vt-tqW" secondAttribute="centerX" id="iwO-Lu-ees"/>
                             <constraint firstItem="bMy-Th-Aaw" firstAttribute="leading" secondItem="Ap1-Vt-tqW" secondAttribute="leading" constant="30" id="iyO-Ai-LmR"/>
                             <constraint firstItem="76Y-0u-GzK" firstAttribute="leading" secondItem="Ap1-Vt-tqW" secondAttribute="leading" constant="30" id="kYj-Q9-ehL"/>
                             <constraint firstItem="Ap1-Vt-tqW" firstAttribute="trailing" secondItem="PJ7-vP-NGG" secondAttribute="trailing" constant="30" id="lmS-ha-W7t"/>
@@ -352,10 +386,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eQQ-Ci-Ngi"/>
+                    <connections>
+                        <outlet property="emailErrorLabel" destination="Z06-zn-rOp" id="1KN-zB-ncy"/>
+                        <outlet property="emailTextField" destination="G37-Jh-nKG" id="HWX-yE-UF0"/>
+                        <outlet property="nameTextField" destination="ktf-4Y-Oud" id="a80-BR-UNc"/>
+                        <outlet property="passwordErrorLabel" destination="Hip-sG-Jbx" id="mvo-Oz-Aoc"/>
+                        <outlet property="passwordTextField" destination="76Y-0u-GzK" id="vJ4-7x-cdC"/>
+                        <outlet property="registerButton" destination="z21-6O-GxM" id="MK6-tg-VEP"/>
+                        <outlet property="repeatPasswordErrorLabel" destination="ieE-yN-fQo" id="z81-WH-uql"/>
+                        <outlet property="repeatPasswordTextField" destination="bMy-Th-Aaw" id="zyP-Fs-45i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P2-AM-Bos" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="607"/>
+            <point key="canvasLocation" x="763.768115942029" y="606.69642857142856"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="7T0-EE-Avo">
