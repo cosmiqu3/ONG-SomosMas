@@ -69,12 +69,92 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func onTapRegister(_ sender: Any) {
-        restarForm()
+        //restarForm()
+        changeStateRegisterButton(false)
+        
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
+        
+        if let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text  {
+            
+            api.register(name: name,
+                         email: email,
+                         password: password,
+                         complete: didGetUserRegister)
+        } else {
+            changeStateRegisterButton(true)
+        }
+    }
+    
+    
+    @IBAction func onTapBackLogin(_ sender: Any) {
+        didBackLogin()
+    }
+    
+    func didGetUserRegister(code: Int, messsage: String) {
+        
+        print("Callback didGetUserRegister")
+        print("code    : \(code)")
+        print("messsage: \(messsage)")
+        
+        if code == 0 {
+            successfulAlertMessage(messsage, complete: didBackLogin)
+        } else {
+            changeStateRegisterButton(true)
+            errorAlertMessage(messsage)
+        }
+    }
+    
+    func didBackLogin() {
+        
+        print("Callback didBackLogin")
+
+        let loginViewController = self.navigationController?.viewControllers.first(where: { viewController in
+            if viewController is LoginViewController {
+                return true
+            } else {
+                return false
+            }
+        })
+        if let vController = loginViewController {
+            self.navigationController?.popToViewController(vController, animated: true)
+        }
+    }
+    
+    func successfulAlertMessage(_ mensaje: String, complete : @escaping () -> ()) {
+        // create the alert
+        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {
+            (action: UIAlertAction!) in
+            complete()
+            return
+        }))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func successfulAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func errorAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     
     func restarForm() {
-        registerButton.isEnabled = false
+        changeStateRegisterButton(false)
+        
         emailStatus = false
         passwordStatus = false
         repeatPasswordStatus = false
@@ -85,11 +165,42 @@ class RegisterViewController: UIViewController {
         
     }
     
+    func changeStateRegisterButton(_ state: Bool) {
+        registerButton.isEnabled = state
+        if state {
+            registerButton.backgroundColor = getUIColor(hex: "#FF0000")
+        } else {
+            registerButton.backgroundColor = getUIColor(hex: "#CBCBCB")
+        }
+    }
+    
+    func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
+        var cleanString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cleanString.hasPrefix("#")) {
+            cleanString.remove(at: cleanString.startIndex)
+        }
+
+        if ((cleanString.count) != 6) {
+            return nil
+        }
+
+        var rgbValue: UInt32 = 0
+        Scanner(string: cleanString).scanHexInt32(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
     func checkValidForm() {
         if emailStatus, passwordStatus,  repeatPasswordStatus {
-            registerButton.isEnabled = true ///el boton esta habilitado
+            changeStateRegisterButton(true) ///el boton esta habilitado
         }else {
-            registerButton.isEnabled = false
+            changeStateRegisterButton(false)
         }
     }
     
@@ -97,7 +208,7 @@ class RegisterViewController: UIViewController {
         let regularExpression = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,20}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regularExpression)
         if !predicate.evaluate(with: value) {
-            return "Email invalido"
+            return "Email inválido"
         }
         return nil
     }
@@ -107,13 +218,13 @@ class RegisterViewController: UIViewController {
             return "La contraseña debe tener al menos 8 caracteres"
         }
         if contaninsDigit(value) {
-            return "La contraseña debe tener al menos 1 digito"
+            return "La contraseña debe tener al menos 1 dígito"
         }
         if contaninsLowerCase(value) {
-            return "La contraseña debe tener al menos 1 minuscula"
+            return "La contraseña debe tener al menos 1 minúscula"
         }
         if contaninsUpperCase(value) {
-            return "La contraseña debe tener al menos 1 mayuscula"
+            return "La contraseña debe tener al menos 1 mayúscula"
         }
         return nil
     }

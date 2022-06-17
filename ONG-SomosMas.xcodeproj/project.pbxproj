@@ -10,6 +10,12 @@
 		838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */; };
 		862F5609285BB979002E7CDC /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F5608285BB979002E7CDC /* ContactoViewController.swift */; };
 		862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */; };
+		86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598087285CCC8E00D30573 /* LoginViewController.swift */; };
+		8659808A285CCD7400D30573 /* DatumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598089285CCD7400D30573 /* DatumResponse.swift */; };
+		8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */; };
+		8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808D285CCDA900D30573 /* NewsResponse.swift */; };
+		86598090285CCDC300D30573 /* DatumNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808F285CCDC300D30573 /* DatumNewsResponse.swift */; };
+		86598092285CCF1A00D30573 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598091285CCF1A00D30573 /* TestimonialsViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -29,6 +35,12 @@
 		5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.debug.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.debug.xcconfig"; sourceTree = "<group>"; };
 		862F5608285BB979002E7CDC /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		86598087285CCC8E00D30573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		86598089285CCD7400D30573 /* DatumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumResponse.swift; sourceTree = "<group>"; };
+		8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsResponse.swift; sourceTree = "<group>"; };
+		8659808D285CCDA900D30573 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		8659808F285CCDC300D30573 /* DatumNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumNewsResponse.swift; sourceTree = "<group>"; };
+		86598091285CCF1A00D30573 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,9 +104,6 @@
 				86BA891E285A930400323B8C /* Assets.xcassets */,
 				86BA8920285A930400323B8C /* LaunchScreen.storyboard */,
 				86BA8923285A930400323B8C /* Info.plist */,
-				86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */,
-				862F5608285BB979002E7CDC /* ContactoViewController.swift */,
-				862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */,
 			);
 			path = "ONG-SomosMas";
 			sourceTree = "<group>";
@@ -107,6 +116,10 @@
 				86D73744285A968A00D03423 /* ErrorsResponse.swift */,
 				86D73746285A96B000D03423 /* RegistryResponse.swift */,
 				86D73748285A96D200D03423 /* UserResponse.swift */,
+				86598089285CCD7400D30573 /* DatumResponse.swift */,
+				8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */,
+				8659808D285CCDA900D30573 /* NewsResponse.swift */,
+				8659808F285CCDC300D30573 /* DatumNewsResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -128,6 +141,11 @@
 		86D7374E285A977000D03423 /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */,
+				862F5608285BB979002E7CDC /* ContactoViewController.swift */,
+				86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */,
+				86598087285CCC8E00D30573 /* LoginViewController.swift */,
+				86598091285CCF1A00D30573 /* TestimonialsViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -278,14 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
+				8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
+				86598092285CCF1A00D30573 /* TestimonialsViewController.swift in Sources */,
 				86CE622E285BDE7B00E7D48B /* RegisterViewController.swift in Sources */,
 				862F5609285BB979002E7CDC /* ContactoViewController.swift in Sources */,
 				862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */,
+				8659808A285CCD7400D30573 /* DatumResponse.swift in Sources */,
+				86598090285CCDC300D30573 /* DatumNewsResponse.swift in Sources */,
 				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
+				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
 				86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */,
