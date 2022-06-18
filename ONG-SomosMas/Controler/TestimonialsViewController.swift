@@ -7,6 +7,21 @@
 
 import UIKit
 
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
 class TestimonialsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var testimonialList: [Testimonial] = []
@@ -16,45 +31,71 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
     func getTestimonialByIndex ( index: Set<Testimonial>.Index) -> Testimonial {
         testimonialList[0]
     }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setup()
+        
     }
     
     func setup() {
         
-        var testimonial = Testimonial(name: "Juan", description: "Yo", photo: "logoSM.png")
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
-        testimonialList.append(testimonial)
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
-        testimonialsTableView.dataSource = self
-        testimonialsTableView.delegate = self
-        testimonialsTableView.backgroundColor = .clear
-        testimonialsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        
-       // self.navigationController?.navigationBar.tintColor = .white
-       // self.navigationController?.navigationBar.barTintColor = .white
+        api.testimonials(complete: didGetTestimonials)
 
+    }
+    
+    func didGetTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
+            print("Callback didGetUserTestimonials")
+            print("code    : \(status)")
+           // debugPrint(response)
         
-        
+        if status == 0 {
+            
+            guard let cantElements = response?.data.count else {
+                errorAlertMessage("No fue posible obtener la lista de Testimonios")
+                return
+            }
+            
+            if cantElements == 0 {
+                
+                errorAlertMessage("No se han ingresados Testimonios")
+                return
+            }
+            
+            response?.data.forEach{ tesmn in
+                print("add element to testimonial list")
+                print("name: \(tesmn.name)")
+                print("description: \(tesmn.datumDescription)")
+                print("photo: \(tesmn.image)")
+                print("")
+                testimonialList.append(Testimonial(name: tesmn.name, description: tesmn.datumDescription ?? "", photo: tesmn.image))
+            }
+            testimonialsTableView.dataSource = self
+            //testimonialsTableView.delegate = self
+            testimonialsTableView.backgroundColor = .clear
+            testimonialsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+            
+            testimonialsTableView.reloadData()
+
+        } else {
+            errorAlertMessage("Error al obtener la lista de Testimonios")
+        }
+    }
+    
+    func errorAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,30 +107,45 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
         let celda:TestimonialsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RowTestimonialsCell", for: indexPath) as! TestimonialsTableViewCell
         
         let testimonialObject = testimonialList[indexPath.row]
-        
         celda.descriptionLabel.text = testimonialObject.description
         celda.nameLabel.text = testimonialObject.name
-        celda.nameLabel.inputAccessoryView?.isOpaque = false
-        
+        //celda.urlImage.inputAccessoryView?.isOpaque = false
+        let urlImage = URL(string: testimonialObject.photo)
+        if urlImage != nil {
+            celda.photoImageView.load(url: urlImage!)
+        }
         celda.imageView?.image = UIImage(systemName: testimonialObject.photo)
-        celda.backgroundColor = .yellow
-      //  celda.tintColor = .white
-        
-//        celda.accessoryType = .none
-//
-//        let _switch = UIView()
-//        _switch.backgroundColor = .yellow
-//        _switch.frame = CGRect(x: 0, y: 0, width: 100, height: 90)
-//
-//        celda.accessoryView = _switch
-//
+        celda.backgroundColor = getUIColor(hex: "FFFCDD", alpha: 0.5)
+ 
         return celda
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+    func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
+        var cleanString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cleanString.hasPrefix("#")) {
+            cleanString.remove(at: cleanString.startIndex)
+        }
+
+        if ((cleanString.count) != 6) {
+            return nil
+        }
+
+        var rgbValue: UInt32 = 0
+        Scanner(string: cleanString).scanHexInt32(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 120
+//    }
     
     
 
