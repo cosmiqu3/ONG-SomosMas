@@ -18,6 +18,7 @@
 		86598092285CCF1A00D30573 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598091285CCF1A00D30573 /* TestimonialsViewController.swift */; };
 		8666831F285E253D00B97D9B /* TestimonialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666831E285E253D00B97D9B /* TestimonialsTableViewCell.swift */; };
 		86668321285E294700B97D9B /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668320285E294700B97D9B /* Testimonial.swift */; };
+		86668323285E5C1C00B97D9B /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668322285E5C1C00B97D9B /* StaffViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		86598091285CCF1A00D30573 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
 		8666831E285E253D00B97D9B /* TestimonialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestimonialsTableViewCell.swift; path = "ONG-SomosMas/UI/TestimonialsTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		86668320285E294700B97D9B /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Testimonial.swift; path = "ONG-SomosMas/Model/Testimonial.swift"; sourceTree = SOURCE_ROOT; };
+		86668322285E5C1C00B97D9B /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */,
 				86598087285CCC8E00D30573 /* LoginViewController.swift */,
 				86598091285CCF1A00D30573 /* TestimonialsViewController.swift */,
+				86668322285E5C1C00B97D9B /* StaffViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				86598090285CCDC300D30573 /* DatumNewsResponse.swift in Sources */,
 				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
+				86668323285E5C1C00B97D9B /* StaffViewController.swift in Sources */,
 				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
