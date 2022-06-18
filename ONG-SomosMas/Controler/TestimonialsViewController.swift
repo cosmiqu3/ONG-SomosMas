@@ -65,27 +65,15 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
         
         let celda:TestimonialsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RowTestimonialsCell", for: indexPath) as! TestimonialsTableViewCell
         
-    
         let testimonialObject = testimonialList[indexPath.row]
-        
-        //var listContentConfiguration = UIListContentConfiguration.cell()
-        //listContentConfiguration.º.text = testimonialObject.name
-       // listContentConfiguration.description = testimonialObject.description
-        
-        //listContentConfiguration.image = UIImage(systemName: actvyObject.imagen)
         
         celda.descriptionLabel.text = testimonialObject.description
         celda.nameLabel.text = testimonialObject.name
         celda.nameLabel.inputAccessoryView?.isOpaque = false
         
         celda.imageView?.image = UIImage(systemName: testimonialObject.photo)
-        
-        
-        //celda.contentConfiguration = listContentConfiguration
         celda.backgroundColor = .yellow
       //  celda.tintColor = .white
-        
-       //s celda.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
 //        celda.accessoryType = .none
 //
@@ -95,7 +83,6 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
 //
 //        celda.accessoryView = _switch
 //
-        
         return celda
         
     }
