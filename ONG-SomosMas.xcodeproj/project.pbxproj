@@ -29,6 +29,9 @@
 		86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73744285A968A00D03423 /* ErrorsResponse.swift */; };
 		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
 		86D73749285A96D200D03423 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73748285A96D200D03423 /* UserResponse.swift */; };
+		86DA20FF285DF40700CA7309 /* TestimonialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DA20FE285DF40700CA7309 /* TestimonialsTableViewCell.swift */; };
+		86DA2101285DF4CB00CA7309 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DA2100285DF4CB00CA7309 /* TestimonialsViewController.swift */; };
+		86DA2103285DFA2300CA7309 /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DA2102285DFA2300CA7309 /* Testimonial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		86D73744285A968A00D03423 /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
 		86D73748285A96D200D03423 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		86DA20FE285DF40700CA7309 /* TestimonialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsTableViewCell.swift; sourceTree = "<group>"; };
+		86DA2100285DF4CB00CA7309 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
+		86DA2102285DFA2300CA7309 /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Testimonial.swift; path = "ONG-SomosMas/Controler/Testimonial.swift"; sourceTree = SOURCE_ROOT; };
 		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,7 @@
 		86BA8914285A930200323B8C /* ONG-SomosMas */ = {
 			isa = PBXGroup;
 			children = (
+				86DA20FD285DF3CC00CA7309 /* UI */,
 				8607917B285BC0F00087CA2C /* TMP */,
 				86D73750285A979000D03423 /* Enum */,
 				86D7374F285A978800D03423 /* Model */,
@@ -157,6 +164,7 @@
 				86079192285C4ABE0087CA2C /* ContactoViewController.swift */,
 				86079194285C4AF20087CA2C /* WelcomePageViewController.swift */,
 				86598082285C57B600D30573 /* LoginViewController.swift */,
+				86DA2100285DF4CB00CA7309 /* TestimonialsViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 		86D7374F285A978800D03423 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				86DA2102285DFA2300CA7309 /* Testimonial.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +182,14 @@
 			children = (
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		86DA20FD285DF3CC00CA7309 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				86DA20FE285DF40700CA7309 /* TestimonialsTableViewCell.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		DAA30F193D1B68EEF243FF91 /* Frameworks */ = {
@@ -315,10 +332,13 @@
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
 				86079183285BDE470087CA2C /* TestimonialsResponse.swift in Sources */,
+				86DA20FF285DF40700CA7309 /* TestimonialsTableViewCell.swift in Sources */,
 				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
 				86079193285C4ABE0087CA2C /* ContactoViewController.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
+				86DA2101285DF4CB00CA7309 /* TestimonialsViewController.swift in Sources */,
 				86079185285C1DD40087CA2C /* NewsResponse.swift in Sources */,
+				86DA2103285DFA2300CA7309 /* Testimonial.swift in Sources */,
 				86079181285BDC7A0087CA2C /* DatumResponse.swift in Sources */,
 				86079191285C4AAA0087CA2C /* RegisterViewController.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
