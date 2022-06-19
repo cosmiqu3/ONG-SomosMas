@@ -1,5 +1,5 @@
 //
-//  StaffViewController.swift
+//  NewsViewController.swift
 //  ONG-SomosMas
 //
 //  Created by training on 18-06-22.
@@ -7,22 +7,18 @@
 
 import UIKit
 
-class StaffViewController: UIViewController {
+class NewsViewController: UIViewController {
+
+    @IBOutlet weak var nameNewsLabel: UILabel!
     
-    @IBOutlet weak var photoImageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var rolLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var descriptionNewsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
     @IBAction func onTapQuieroSerParte(_ sender: Any) {
     }

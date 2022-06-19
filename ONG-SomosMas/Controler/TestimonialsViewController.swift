@@ -51,6 +51,12 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
 
     }
     
+    
+    @IBAction func onTapAgregarTestimonio(_ sender: Any) {
+    }
+    
+    
+    
     func didGetTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
             print("Callback didGetUserTestimonials")
             print("code    : \(status)")

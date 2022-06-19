@@ -19,6 +19,7 @@
 		8666832A285E65F500B97D9B /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668329285E65F500B97D9B /* Testimonial.swift */; };
 		8666832C285E665100B97D9B /* TestimonialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */; };
 		8666832E285E674800B97D9B /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832D285E674800B97D9B /* StaffViewController.swift */; };
+		86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832F285E9B6300B97D9B /* NewsViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		86668329285E65F500B97D9B /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testimonial.swift; sourceTree = "<group>"; };
 		8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsTableViewCell.swift; sourceTree = "<group>"; };
 		8666832D285E674800B97D9B /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
+		8666832F285E9B6300B97D9B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				86598087285CCC8E00D30573 /* LoginViewController.swift */,
 				86598091285CCF1A00D30573 /* TestimonialsViewController.swift */,
 				8666832D285E674800B97D9B /* StaffViewController.swift */,
+				8666832F285E9B6300B97D9B /* NewsViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				8666832E285E674800B97D9B /* StaffViewController.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
+				86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */,
 				86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */,
 				8666832C285E665100B97D9B /* TestimonialsTableViewCell.swift in Sources */,
 			);
