@@ -32,6 +32,7 @@ class ContactoViewController: UIViewController {
             donarButton.layer.shadowOpacity = 1.0
             donarButton.layer.shadowRadius = 2.0
             donarButton.layer.masksToBounds = false
+            
         }
     }
     
