@@ -183,16 +183,39 @@ class ContactoViewController: UIViewController {
             enviarButton.isEnabled = false
         }
     }
+
     
+    @IBAction func onTapEnviarMensaje(_ sender: Any) {
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
+        api.Contacts(nombre: "Juan", correo: "ju01@gmail.com", telefono: "123456", mensaje: "ok", complete: didGetContacts)
+    }
     
+    func didGetContacts(_ status: Int, _ response : ContactsResponse?) {
+        print("Callback didGetContacts")
+        print("status    : \(status)")
+        if status == 0 {
+            successfulAlertMessage(response?.message ?? "")
+        } else {
+            errorAlertMessage("Se ha producido un error al registrar contacto")
+        }
+    }
     
+    func successfulAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    
-    
-    
-    
- 
-    
-   
+    func errorAlertMessage(_ mensaje: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

@@ -14,7 +14,7 @@ class ONGServiceAPIRest {
     let url_base: String = "https://ongapi.alkemy.org/api"
 
     
-    //MARK: Method
+    //MARK: Method Register
     func register(name: String, email: String, password: String, complete : @escaping (_ code: Int, _ messsage: String) -> ()) {
         
         let headers: HTTPHeaders = [
@@ -61,6 +61,58 @@ class ONGServiceAPIRest {
             } catch let error {
                 print(error)
                 complete(3,"error al leer contenido")
+                return
+            }
+         }
+    }
+    
+    //MARK: Method Contacts
+    func Contacts(nombre: String, correo: String, telefono: String, mensaje: String, complete : @escaping (_ code: Int, _ response : ContactsResponse?) -> ()) {
+        
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        
+        let parameters: [String: String] = [
+            "name": nombre,
+            "email": correo,
+            "phone": telefono,
+            "message": mensaje
+        ]
+        
+        AF.request("\(url_base)/contacts", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers).response { response in
+            
+            print ("response:")
+            debugPrint(response)
+            
+            if response.error != nil {
+                complete(1, nil)
+                return
+            }
+
+            guard let data = response.data else {
+                complete(2, nil)
+                return
+            }
+            
+            do {
+                let contactsResponse = try JSONDecoder().decode(ContactsResponse.self, from: data)
+                print("*** resultado ***\n")
+                print("success: \(contactsResponse.success ?? false)")
+                print("message: \(contactsResponse.message)")
+                print("data   : \(contactsResponse.data)")
+                
+                if (contactsResponse.success ?? false) {
+                    complete(0,contactsResponse)
+                    return
+                } else {
+                    complete(-1, nil)
+                    return
+                }
+               
+            } catch let error {
+                print(error)
+                complete(3, nil)
                 return
             }
          }
