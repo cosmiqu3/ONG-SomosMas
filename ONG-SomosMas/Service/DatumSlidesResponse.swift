@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DatumSlideResponse : Codable {
+struct DatumSlidesResponse : Codable {
     
     let id: Int
     let name, datumDescription: String

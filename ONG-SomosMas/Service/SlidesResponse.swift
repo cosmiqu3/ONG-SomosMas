@@ -9,6 +9,6 @@ import Foundation
 
 struct SlidesResponse: Codable {
     let success: Bool?
-    let data: [DatumSlideResponse]
+    let data: [DatumSlidesResponse]
     let message: String
 }

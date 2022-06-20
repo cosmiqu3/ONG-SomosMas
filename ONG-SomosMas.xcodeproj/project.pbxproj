@@ -20,7 +20,7 @@
 		86668321285E294700B97D9B /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668320285E294700B97D9B /* Testimonial.swift */; };
 		86668323285E5C1C00B97D9B /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668322285E5C1C00B97D9B /* StaffViewController.swift */; };
 		8666834C2860D7F000B97D9B /* SlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666834B2860D7F000B97D9B /* SlidesResponse.swift */; };
-		8666834E2860D82100B97D9B /* DatumSlideResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666834D2860D82100B97D9B /* DatumSlideResponse.swift */; };
+		8666834E2860D82100B97D9B /* DatumSlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666834D2860D82100B97D9B /* DatumSlidesResponse.swift */; };
 		866683512860DA9900B97D9B /* ButtomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683502860DA9900B97D9B /* ButtomViewController.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
@@ -51,7 +51,7 @@
 		86668320285E294700B97D9B /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Testimonial.swift; path = "ONG-SomosMas/Model/Testimonial.swift"; sourceTree = SOURCE_ROOT; };
 		86668322285E5C1C00B97D9B /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
 		8666834B2860D7F000B97D9B /* SlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesResponse.swift; sourceTree = "<group>"; };
-		8666834D2860D82100B97D9B /* DatumSlideResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumSlideResponse.swift; sourceTree = "<group>"; };
+		8666834D2860D82100B97D9B /* DatumSlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumSlidesResponse.swift; sourceTree = "<group>"; };
 		866683502860DA9900B97D9B /* ButtomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomViewController.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				8659808D285CCDA900D30573 /* NewsResponse.swift */,
 				8659808F285CCDC300D30573 /* DatumNewsResponse.swift */,
 				8666834B2860D7F000B97D9B /* SlidesResponse.swift */,
-				8666834D2860D82100B97D9B /* DatumSlideResponse.swift */,
+				8666834D2860D82100B97D9B /* DatumSlidesResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 			files = (
 				86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
-				8666834E2860D82100B97D9B /* DatumSlideResponse.swift in Sources */,
+				8666834E2860D82100B97D9B /* DatumSlidesResponse.swift in Sources */,
 				8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */,
 				8666834C2860D7F000B97D9B /* SlidesResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
