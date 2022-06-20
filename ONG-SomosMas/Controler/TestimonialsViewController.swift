@@ -28,9 +28,9 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var testimonialsTableView: UITableView!
    
-    func getTestimonialByIndex ( index: Set<Testimonial>.Index) -> Testimonial {
-        testimonialList[0]
-    }
+//    func getTestimonialByIndex ( index: Set<Testimonial>.Index) -> Testimonial {
+//        testimonialList[0]
+//    }
     
     
     

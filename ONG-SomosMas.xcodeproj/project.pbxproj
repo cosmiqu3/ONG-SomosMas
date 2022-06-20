@@ -22,6 +22,7 @@
 		86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832F285E9B6300B97D9B /* NewsViewController.swift */; };
 		866683532860E56E00B97D9B /* SlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683522860E56D00B97D9B /* SlidesResponse.swift */; };
 		866683552860E5AD00B97D9B /* DatumSlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683542860E5AD00B97D9B /* DatumSlidesResponse.swift */; };
+		866683572861235300B97D9B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683562861235300B97D9B /* News.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
 		86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8917285A930200323B8C /* SceneDelegate.swift */; };
 		86BA891A285A930200323B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8919285A930200323B8C /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		8666832F285E9B6300B97D9B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		866683522860E56D00B97D9B /* SlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesResponse.swift; sourceTree = "<group>"; };
 		866683542860E5AD00B97D9B /* DatumSlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumSlidesResponse.swift; sourceTree = "<group>"; };
+		866683562861235300B97D9B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				86668329285E65F500B97D9B /* Testimonial.swift */,
+				866683562861235300B97D9B /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
 				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,
 				8666832E285E674800B97D9B /* StaffViewController.swift in Sources */,
+				866683572861235300B97D9B /* News.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
 				86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */,
