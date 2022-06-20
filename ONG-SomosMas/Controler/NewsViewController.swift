@@ -15,6 +15,35 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var descriptionNewsLabel: UILabel!
     
+    var thisImage = 0
+    let arrayImages = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4"), UIImage(named: "5")]
+    
+    
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var imageUsedUIImage: UIImageView!
+    
+    
+    @IBAction func onTapLeftButton(_ sender: Any) {
+        thisImage = thisImage - 1
+        if thisImage >= 0 {
+            imageUsedUIImage.image = arrayImages[thisImage]
+        }else {
+            leftButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func onTapRightButton(_ sender: Any) {
+        leftButton.isEnabled = true
+        thisImage = thisImage + 1
+        if thisImage < arrayImages.count{
+            imageUsedUIImage.image = arrayImages[thisImage]
+        }else {
+            thisImage = 0
+            imageUsedUIImage.image = arrayImages[thisImage]
+        }
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +55,8 @@ class NewsViewController: UIViewController {
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
         api.news(complete: didGetNews)
+        imageUsedUIImage.image = arrayImages[thisImage]
+        leftButton.isEnabled = false
     }
     
     func didGetNews(_ status: Int, _ response : NewsResponse?) {

@@ -582,18 +582,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novedades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUV-o7-iwE">
-                                <rect key="frame" x="20" y="190" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novedades" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-fv-jjX">
-                                <rect key="frame" x="0.0" y="231" width="414" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="mWC-gT-4QB"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-NP-pss">
                                 <rect key="frame" x="120" y="88" width="200" height="100"/>
                                 <constraints>
@@ -630,23 +618,51 @@
                                     <action selector="onTapQuieroSerParte:" destination="5lU-kf-mJ5" eventType="touchUpInside" id="K18-hl-kO2"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-1b-w0W">
+                                <rect key="frame" x="40" y="229" width="334" height="202"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFH-wK-DxH">
+                                <rect key="frame" x="4" y="303" width="46.5" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="onTapLeftButton:" destination="5lU-kf-mJ5" eventType="touchUpInside" id="exk-5k-v7S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntr-36-huh">
+                                <rect key="frame" x="375" y="306" width="46.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right" catalog="system"/>
+                                <connections>
+                                    <action selector="onTapRightButton:" destination="5lU-kf-mJ5" eventType="touchUpInside" id="Qwa-y9-vpj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novedades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUV-o7-iwE">
+                                <rect key="frame" x="20" y="190" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zK7-bb-iqn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zK7-bb-iqn" firstAttribute="trailing" secondItem="AUV-o7-iwE" secondAttribute="trailing" constant="20" id="4V9-Ki-VvT"/>
+                            <constraint firstItem="3ey-1b-w0W" firstAttribute="top" secondItem="AUV-o7-iwE" secondAttribute="bottom" constant="3" id="4hk-NS-N27"/>
                             <constraint firstItem="zK7-bb-iqn" firstAttribute="bottom" secondItem="Rh5-aE-90T" secondAttribute="bottom" constant="40" id="5kn-Rz-L8z"/>
                             <constraint firstItem="ya3-NP-pss" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="120" id="9RH-Wd-po2"/>
-                            <constraint firstItem="pzq-Z9-f0l" firstAttribute="top" secondItem="ghH-fv-jjX" secondAttribute="bottom" constant="5" id="Blm-ca-v9N"/>
                             <constraint firstItem="Rh5-aE-90T" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="20" id="Hea-po-PQC"/>
                             <constraint firstItem="zpU-mw-6qQ" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="20" id="Ie6-cK-ex5"/>
+                            <constraint firstItem="Rh5-aE-90T" firstAttribute="top" secondItem="zpU-mw-6qQ" secondAttribute="bottom" constant="52" id="JDg-vd-B5D"/>
                             <constraint firstItem="AUV-o7-iwE" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="20" id="Jqo-sF-wCd"/>
                             <constraint firstItem="pzq-Z9-f0l" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="20" id="Msy-vM-OvS"/>
                             <constraint firstItem="AUV-o7-iwE" firstAttribute="top" secondItem="ya3-NP-pss" secondAttribute="bottom" constant="2" id="PZ7-A8-6tf"/>
+                            <constraint firstItem="zK7-bb-iqn" firstAttribute="trailing" secondItem="3ey-1b-w0W" secondAttribute="trailing" constant="40" id="WG2-94-0eV"/>
+                            <constraint firstItem="pzq-Z9-f0l" firstAttribute="top" secondItem="3ey-1b-w0W" secondAttribute="bottom" constant="5" id="Y1w-N7-Jcq"/>
                             <constraint firstItem="zpU-mw-6qQ" firstAttribute="top" secondItem="pzq-Z9-f0l" secondAttribute="bottom" constant="10" id="YLQ-jw-epP"/>
-                            <constraint firstItem="ghH-fv-jjX" firstAttribute="top" secondItem="AUV-o7-iwE" secondAttribute="bottom" constant="5" id="d1I-hL-vRC"/>
-                            <constraint firstAttribute="trailing" secondItem="ghH-fv-jjX" secondAttribute="trailing" id="gcf-1K-bG8"/>
-                            <constraint firstItem="ghH-fv-jjX" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" id="gva-86-Yoi"/>
+                            <constraint firstItem="3ey-1b-w0W" firstAttribute="leading" secondItem="zK7-bb-iqn" secondAttribute="leading" constant="40" id="eha-NQ-eqe"/>
                             <constraint firstItem="zK7-bb-iqn" firstAttribute="trailing" secondItem="Rh5-aE-90T" secondAttribute="trailing" constant="260" id="rEc-NI-2jL"/>
                             <constraint firstItem="ya3-NP-pss" firstAttribute="top" secondItem="zK7-bb-iqn" secondAttribute="top" id="t8W-mx-UHV"/>
                             <constraint firstAttribute="trailing" secondItem="zpU-mw-6qQ" secondAttribute="trailing" constant="20" id="wue-Ll-LWJ"/>
@@ -658,12 +674,15 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionNewsLabel" destination="zpU-mw-6qQ" id="TYG-jg-bjM"/>
+                        <outlet property="imageUsedUIImage" destination="3ey-1b-w0W" id="p1O-jR-OCp"/>
+                        <outlet property="leftButton" destination="mFH-wK-DxH" id="NF9-oY-u4p"/>
                         <outlet property="nameNewsLabel" destination="pzq-Z9-f0l" id="Kpq-zf-xIt"/>
+                        <outlet property="rightButton" destination="Ntr-36-huh" id="YxE-f5-rjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s6-Uv-jlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615.94202898550725" y="1034.5982142857142"/>
+            <point key="canvasLocation" x="614.49275362318849" y="1034.5982142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cNF-ZI-phZ">
@@ -857,10 +876,11 @@
     <resources>
         <image name="LOGO-SOMOS MAS" width="200" height="200"/>
         <image name="Pie" width="720" height="469"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="logoSM" width="1263" height="547"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
-        <image name="novedades" width="978" height="466"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="staff" width="634" height="232"/>
