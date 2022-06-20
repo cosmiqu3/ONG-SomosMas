@@ -19,16 +19,13 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         setup()
     }
     
     func setup() {
-        
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
         api.news(complete: didGetNews)
-
     }
     
     func didGetNews(_ status: Int, _ response : NewsResponse?) {
@@ -36,14 +33,11 @@ class NewsViewController: UIViewController {
         print("code    : \(status)")
         
         if status == 0 {
-            
             guard let cantElements = response?.data.count else {
                 errorAlertMessage("No fue posible obtener la lista de Novedades")
                 return
             }
-            
             if cantElements == 0 {
-                
                 errorAlertMessage("No se han ingresados Novedades")
                 return
             }
@@ -62,7 +56,6 @@ class NewsViewController: UIViewController {
             }
             
             // cargar slider
-    
 
         } else {
             errorAlertMessage("Error al obtener la lista de Novedades")
