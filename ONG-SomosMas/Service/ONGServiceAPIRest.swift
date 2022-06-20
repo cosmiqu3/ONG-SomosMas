@@ -148,5 +148,46 @@ class ONGServiceAPIRest {
             }
          }
     }
+    
+    //MARK: Method
+    func slides(complete : @escaping (_ status: Int, _ response : SlidesResponse?) -> ()) {
+        
+        AF.request("\(url_base)/slides").response { response in
+            
+            print ("response:")
+            debugPrint(response)
+            
+            if response.error != nil {
+                complete(1,nil)
+                return
+            }
+
+            guard let data = response.data else {
+                complete(2,nil)
+                return
+            }
+            
+            do {
+                let slidesResponse = try JSONDecoder().decode(SlidesResponse.self, from: data)
+                print("*** resultado ***\n")
+                print("success: \(slidesResponse.success ?? false)")
+                print("message: \(slidesResponse.message)")
+                print("data   : \(slidesResponse.data)")
+                
+                if (slidesResponse.success ?? false) {
+                    complete(0, slidesResponse)
+                    return
+                } else {
+                    complete(-1,nil)
+                    return
+                }
+               
+            } catch let error {
+                print(error)
+                complete(3, nil)
+                return
+            }
+         }
+    }
 }
 
