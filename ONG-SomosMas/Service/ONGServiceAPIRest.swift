@@ -10,12 +10,11 @@ import Alamofire
 
 class ONGServiceAPIRest {
     
-    // MARK: Properties
+    // MARK: URL API
     let url_base: String = "https://ongapi.alkemy.org/api"
 
-    
     //MARK: Method Register
-    func register(name: String, email: String, password: String, complete : @escaping (_ code: Int, _ messsage: String) -> ()) {
+    func register(name: String, email: String, password: String, complete : @escaping (_ status : APIStatusType, _ messsage: String) -> ()) {
         
         let headers: HTTPHeaders = [
             "Accept": "application/json"
@@ -33,12 +32,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1,"se encontró un error")
+                complete(.api_call_error,"se encontró un error")
                 return
             }
 
             guard let data = response.data else {
-                complete(2,"sin datos")
+                complete(.no_data,"sin datos")
                 return
             }
             
@@ -51,23 +50,23 @@ class ONGServiceAPIRest {
                 print("data   : \(registryResponse.data)")
                 
                 if (registryResponse.success ?? false) {
-                    complete(0,registryResponse.message)
+                    complete(.success,registryResponse.message)
                     return
                 } else {
-                    complete(-1,registryResponse.message)
+                    complete(.unsuccessfully,registryResponse.message)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3,"error al leer contenido")
+                complete(.error_processing_content,"error al leer contenido")
                 return
             }
          }
     }
     
     //MARK: Method Contacts
-    func Contacts(nombre: String, correo: String, telefono: String, mensaje: String, complete : @escaping (_ code: Int, _ response : ContactsResponse?) -> ()) {
+    func Contacts(nombre: String, correo: String, telefono: String, mensaje: String, complete : @escaping (_ status: APIStatusType, _ response : ContactsResponse?) -> ()) {
         
         let headers: HTTPHeaders = [
             "Accept": "application/json"
@@ -86,12 +85,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1, nil)
+                complete(.api_call_error, nil)
                 return
             }
 
             guard let data = response.data else {
-                complete(2, nil)
+                complete(.no_data, nil)
                 return
             }
             
@@ -103,23 +102,23 @@ class ONGServiceAPIRest {
                 print("data   : \(contactsResponse.data)")
                 
                 if (contactsResponse.success ?? false) {
-                    complete(0,contactsResponse)
+                    complete(.success,contactsResponse)
                     return
                 } else {
-                    complete(-1, nil)
+                    complete(.unsuccessfully, nil)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3, nil)
+                complete(.error_processing_content, nil)
                 return
             }
          }
     }
     
-    //MARK: Method
-    func testimonials(complete : @escaping (_ status: Int, _ response : TestimonialsResponse?) -> ()) {
+    //MARK: Method Testimonials
+    func testimonials(complete : @escaping (_ status: APIStatusType, _ response : TestimonialsResponse?, _ message: String?) -> ()) {
         
         AF.request("\(url_base)/testimonials").response { response in
             
@@ -127,12 +126,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1,nil)
+                complete(.api_call_error, nil, nil)
                 return
             }
 
             guard let data = response.data else {
-                complete(2,nil)
+                complete(.no_data, nil, nil)
                 return
             }
             
@@ -144,24 +143,24 @@ class ONGServiceAPIRest {
                 print("data   : \(testimonialsResponse.data)")
                 
                 if (testimonialsResponse.success ?? false) {
-                    complete(0, testimonialsResponse)
+                    complete(.success, testimonialsResponse, testimonialsResponse.message)
                     return
                 } else {
-                    complete(-1,nil)
+                    complete(.unsuccessfully,nil, testimonialsResponse.message)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3, nil)
+                complete(.error_processing_content, nil, nil)
                 return
             }
          }
     }
     
     
-    //MARK: Method
-    func news(complete : @escaping (_ status: Int, _ response : NewsResponse?) -> ()) {
+    //MARK: Method News
+    func news(complete : @escaping (_ status: APIStatusType, _ response : NewsResponse?) -> ()) {
         
         AF.request("\(url_base)/news").response { response in
             
@@ -169,12 +168,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1,nil)
+                complete(.api_call_error,nil)
                 return
             }
 
             guard let data = response.data else {
-                complete(2,nil)
+                complete(.no_data,nil)
                 return
             }
             
@@ -186,23 +185,23 @@ class ONGServiceAPIRest {
                 print("data   : \(newsResponse.data)")
                 
                 if (newsResponse.success ?? false) {
-                    complete(0, newsResponse)
+                    complete(.success, newsResponse)
                     return
                 } else {
-                    complete(-1,nil)
+                    complete(.unsuccessfully,nil)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3, nil)
+                complete(.error_processing_content, nil)
                 return
             }
          }
     }
     
-    //MARK: Method
-    func slides(complete : @escaping (_ status: Int, _ response : SlidesResponse?) -> ()) {
+    //MARK: Method Slides
+    func slides(complete : @escaping (_ status: APIStatusType, _ response : SlidesResponse?) -> ()) {
         
         AF.request("\(url_base)/slides").response { response in
             
@@ -210,12 +209,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1,nil)
+                complete(.api_call_error,nil)
                 return
             }
 
             guard let data = response.data else {
-                complete(2,nil)
+                complete(.no_data,nil)
                 return
             }
             
@@ -227,16 +226,16 @@ class ONGServiceAPIRest {
                 print("data   : \(slidesResponse.data)")
                 
                 if (slidesResponse.success ?? false) {
-                    complete(0, slidesResponse)
+                    complete(.success, slidesResponse)
                     return
                 } else {
-                    complete(-1,nil)
+                    complete(.unsuccessfully,nil)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3, nil)
+                complete(.error_processing_content, nil)
                 return
             }
          }

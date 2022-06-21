@@ -11,17 +11,14 @@
 		862F5609285BB979002E7CDC /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F5608285BB979002E7CDC /* ContactoViewController.swift */; };
 		862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */; };
 		86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598087285CCC8E00D30573 /* LoginViewController.swift */; };
-		8659808A285CCD7400D30573 /* DatumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598089285CCD7400D30573 /* DatumResponse.swift */; };
 		8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */; };
 		8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808D285CCDA900D30573 /* NewsResponse.swift */; };
-		86598090285CCDC300D30573 /* DatumNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808F285CCDC300D30573 /* DatumNewsResponse.swift */; };
 		86598092285CCF1A00D30573 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598091285CCF1A00D30573 /* TestimonialsViewController.swift */; };
 		8666832A285E65F500B97D9B /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86668329285E65F500B97D9B /* Testimonial.swift */; };
 		8666832C285E665100B97D9B /* TestimonialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */; };
 		8666832E285E674800B97D9B /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832D285E674800B97D9B /* StaffViewController.swift */; };
 		86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666832F285E9B6300B97D9B /* NewsViewController.swift */; };
 		866683532860E56E00B97D9B /* SlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683522860E56D00B97D9B /* SlidesResponse.swift */; };
-		866683552860E5AD00B97D9B /* DatumSlidesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866683542860E5AD00B97D9B /* DatumSlidesResponse.swift */; };
 		8666835C2861418100B97D9B /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666835B2861418100B97D9B /* ContactsResponse.swift */; };
 		8666835E286141FE00B97D9B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8666835D286141FE00B97D9B /* News.swift */; };
 		86BA8916285A930200323B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA8915285A930200323B8C /* AppDelegate.swift */; };
@@ -31,11 +28,10 @@
 		86BA891F285A930400323B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BA891E285A930400323B8C /* Assets.xcassets */; };
 		86BA8922285A930400323B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8920285A930400323B8C /* LaunchScreen.storyboard */; };
 		86CE622E285BDE7B00E7D48B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */; };
+		86CF962D28623E2800F08878 /* APIStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF962C28623E2800F08878 /* APIStatusType.swift */; };
+		86CF962F28623E7C00F08878 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF962E28623E7C00F08878 /* BaseViewController.swift */; };
 		86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */; };
-		86D73743285A965300D03423 /* DataClassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73742285A965300D03423 /* DataClassResponse.swift */; };
-		86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73744285A968A00D03423 /* ErrorsResponse.swift */; };
 		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
-		86D73749285A96D200D03423 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73748285A96D200D03423 /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,17 +40,14 @@
 		862F5608285BB979002E7CDC /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		86598087285CCC8E00D30573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		86598089285CCD7400D30573 /* DatumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumResponse.swift; sourceTree = "<group>"; };
 		8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsResponse.swift; sourceTree = "<group>"; };
 		8659808D285CCDA900D30573 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
-		8659808F285CCDC300D30573 /* DatumNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumNewsResponse.swift; sourceTree = "<group>"; };
 		86598091285CCF1A00D30573 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
 		86668329285E65F500B97D9B /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testimonial.swift; sourceTree = "<group>"; };
 		8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsTableViewCell.swift; sourceTree = "<group>"; };
 		8666832D285E674800B97D9B /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
 		8666832F285E9B6300B97D9B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		866683522860E56D00B97D9B /* SlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesResponse.swift; sourceTree = "<group>"; };
-		866683542860E5AD00B97D9B /* DatumSlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumSlidesResponse.swift; sourceTree = "<group>"; };
 		8666835B2861418100B97D9B /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		8666835D286141FE00B97D9B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,11 +59,10 @@
 		86BA8921285A930400323B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BA8923285A930400323B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		86CF962C28623E2800F08878 /* APIStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStatusType.swift; sourceTree = "<group>"; };
+		86CF962E28623E7C00F08878 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONGServiceAPIRest.swift; sourceTree = "<group>"; };
-		86D73742285A965300D03423 /* DataClassResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClassResponse.swift; sourceTree = "<group>"; };
-		86D73744285A968A00D03423 /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
-		86D73748285A96D200D03423 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,16 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */,
-				86D73744285A968A00D03423 /* ErrorsResponse.swift */,
-				86D73742285A965300D03423 /* DataClassResponse.swift */,
 				86D73746285A96B000D03423 /* RegistryResponse.swift */,
-				86D73748285A96D200D03423 /* UserResponse.swift */,
-				86598089285CCD7400D30573 /* DatumResponse.swift */,
 				8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */,
 				8659808D285CCDA900D30573 /* NewsResponse.swift */,
-				8659808F285CCDC300D30573 /* DatumNewsResponse.swift */,
 				866683522860E56D00B97D9B /* SlidesResponse.swift */,
-				866683542860E5AD00B97D9B /* DatumSlidesResponse.swift */,
 				8666835B2861418100B97D9B /* ContactsResponse.swift */,
 			);
 			path = Service;
@@ -168,6 +154,7 @@
 				86598091285CCF1A00D30573 /* TestimonialsViewController.swift */,
 				8666832D285E674800B97D9B /* StaffViewController.swift */,
 				8666832F285E9B6300B97D9B /* NewsViewController.swift */,
+				86CF962E28623E7C00F08878 /* BaseViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -184,6 +171,7 @@
 		86D73750285A979000D03423 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				86CF962C28623E2800F08878 /* APIStatusType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -325,25 +313,21 @@
 				8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
+				86CF962F28623E7C00F08878 /* BaseViewController.swift in Sources */,
 				86598092285CCF1A00D30573 /* TestimonialsViewController.swift in Sources */,
 				86CE622E285BDE7B00E7D48B /* RegisterViewController.swift in Sources */,
 				862F5609285BB979002E7CDC /* ContactoViewController.swift in Sources */,
 				862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */,
 				8666832A285E65F500B97D9B /* Testimonial.swift in Sources */,
 				866683532860E56E00B97D9B /* SlidesResponse.swift in Sources */,
-				8659808A285CCD7400D30573 /* DatumResponse.swift in Sources */,
-				86598090285CCDC300D30573 /* DatumNewsResponse.swift in Sources */,
-				86D73749285A96D200D03423 /* UserResponse.swift in Sources */,
-				866683552860E5AD00B97D9B /* DatumSlidesResponse.swift in Sources */,
 				8666835C2861418100B97D9B /* ContactsResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
 				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,
 				8666835E286141FE00B97D9B /* News.swift in Sources */,
 				8666832E285E674800B97D9B /* StaffViewController.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
-				86D73743285A965300D03423 /* DataClassResponse.swift in Sources */,
+				86CF962D28623E2800F08878 /* APIStatusType.swift in Sources */,
 				86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */,
-				86D73745285A968A00D03423 /* ErrorsResponse.swift in Sources */,
 				8666832C285E665100B97D9B /* TestimonialsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

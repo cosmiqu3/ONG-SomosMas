@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -76,6 +76,8 @@ class RegisterViewController: UIViewController {
         
         if let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text  {
             
+            activityIndicator.startAnimating()
+            
             api.register(name: name,
                          email: email,
                          password: password,
@@ -90,18 +92,19 @@ class RegisterViewController: UIViewController {
         didBackLogin()
     }
     
-    func didGetUserRegister(code: Int, messsage: String) {
+    func didGetUserRegister(status: APIStatusType, messsage: String) {
         
         print("Callback didGetUserRegister")
-        print("code    : \(code)")
+        print("code    : \(status)")
         print("messsage: \(messsage)")
         
-        if code == 0 {
+        if status == .success {
             successfulAlertMessage(messsage, complete: didBackLogin)
         } else {
             changeStateRegisterButton(true)
             errorAlertMessage(messsage)
         }
+        activityIndicator.stopAnimating()
     }
     
     func didBackLogin() {
@@ -119,38 +122,6 @@ class RegisterViewController: UIViewController {
             self.navigationController?.popToViewController(vController, animated: true)
         }
     }
-    
-    func successfulAlertMessage(_ mensaje: String, complete : @escaping () -> ()) {
-        // create the alert
-        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {
-            (action: UIAlertAction!) in
-            complete()
-            return
-        }))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func successfulAlertMessage(_ mensaje: String) {
-        // create the alert
-        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func errorAlertMessage(_ mensaje: String) {
-        // create the alert
-        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
     func restarForm() {
         changeStateRegisterButton(false)
@@ -172,28 +143,6 @@ class RegisterViewController: UIViewController {
         } else {
             registerButton.backgroundColor = getUIColor(hex: "#CBCBCB")
         }
-    }
-    
-    func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
-        var cleanString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cleanString.hasPrefix("#")) {
-            cleanString.remove(at: cleanString.startIndex)
-        }
-
-        if ((cleanString.count) != 6) {
-            return nil
-        }
-
-        var rgbValue: UInt32 = 0
-        Scanner(string: cleanString).scanHexInt32(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
     }
     
     func checkValidForm() {

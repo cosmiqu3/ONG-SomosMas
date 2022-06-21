@@ -7,22 +7,7 @@
 
 import UIKit
 
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
-
-class TestimonialsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class TestimonialsViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var testimonialList: [Testimonial] = []
     
@@ -44,11 +29,10 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func setup() {
+        activityIndicator.startAnimating()
         
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
-        
         api.testimonials(complete: didGetTestimonials)
-
     }
     
     
@@ -57,12 +41,12 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
     
     
     
-    func didGetTestimonials(_ status: Int, _ response : TestimonialsResponse?) {
+    func didGetTestimonials(_ status: APIStatusType, _ response : TestimonialsResponse?, message: String?) {
             print("Callback didGetUserTestimonials")
             print("code    : \(status)")
            // debugPrint(response)
         
-        if status == 0 {
+        if status == .success {
             
             guard let cantElements = response?.data.count else {
                 errorAlertMessage("No fue posible obtener la lista de Testimonios")
@@ -93,15 +77,7 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
         } else {
             errorAlertMessage("Error al obtener la lista de Testimonios")
         }
-    }
-    
-    func errorAlertMessage(_ mensaje: String) {
-        // create the alert
-        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        activityIndicator.stopAnimating()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,28 +101,6 @@ class TestimonialsViewController: UIViewController, UITableViewDataSource, UITab
  
         return celda
         
-    }
-    
-    func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
-        var cleanString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cleanString.hasPrefix("#")) {
-            cleanString.remove(at: cleanString.startIndex)
-        }
-
-        if ((cleanString.count) != 6) {
-            return nil
-        }
-
-        var rgbValue: UInt32 = 0
-        Scanner(string: cleanString).scanHexInt32(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

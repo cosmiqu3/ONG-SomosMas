@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactoViewController: UIViewController {
+class ContactoViewController: BaseViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var telTextField: UITextField!

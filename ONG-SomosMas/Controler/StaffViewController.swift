@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StaffViewController: UIViewController {
+class StaffViewController: BaseViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
