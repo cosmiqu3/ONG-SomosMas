@@ -9,15 +9,27 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    var newsList: [News] = []
-
     @IBOutlet weak var nameNewsLabel: UILabel!
     
     @IBOutlet weak var descriptionNewsLabel: UILabel!
+
     
     var thisImage = 0
+    
     let arrayImages = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4"), UIImage(named: "5")]
     
+    var newsList: [News] = [
+        News(name: "Noticia 1", content: "Descripción 1", image: "1"),
+        News(name: "Noticia 2", content: "Descripción 2", image: "2"),
+        News(name: "Noticia 3", content: "Descripción 3", image: "3"),
+        News(name: "Noticia 4", content: "Descripción 4", image: "4"),
+        News(name: "Noticia 5", content: "Descripción 5", image: "5")
+    ]
+    
+    struct Actividad {
+        let nombre: String
+        let imagen: String
+    }
     
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
@@ -31,6 +43,9 @@ class NewsViewController: UIViewController {
         }else {
             leftButton.isEnabled = false
         }
+        
+        nameNewsLabel.text = newsList[thisImage].name
+        descriptionNewsLabel.text = newsList[thisImage].content
     }
     
     @IBAction func onTapRightButton(_ sender: Any) {
@@ -42,6 +57,8 @@ class NewsViewController: UIViewController {
             thisImage = 0
             imageUsedUIImage.image = arrayImages[thisImage]
         }
+        nameNewsLabel.text = newsList[thisImage].name
+        descriptionNewsLabel.text = newsList[thisImage].content
     }
         
     override func viewDidLoad() {
@@ -56,6 +73,10 @@ class NewsViewController: UIViewController {
         
         api.news(complete: didGetNews)
         imageUsedUIImage.image = arrayImages[thisImage]
+        
+        nameNewsLabel.text = newsList[thisImage].name
+        descriptionNewsLabel.text = newsList[thisImage].content
+        
         leftButton.isEnabled = false
     }
     
