@@ -7,8 +7,3 @@
 
 import Foundation
 
-struct ErrorsResponse: Codable {
-    
-    let email: [String]
-    
-}

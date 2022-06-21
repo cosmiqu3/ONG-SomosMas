@@ -1,32 +1,35 @@
 //
-//  StaffViewController.swift
+//  BaseViewController.swift
 //  ONG-SomosMas
 //
-//  Created by training on 18-06-22.
+//  Created by training on 21-06-22.
 //
 
 import UIKit
 
-class StaffViewController: BaseViewController {
-    
-    @IBOutlet weak var photoImageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var rolLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
+class BaseViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onTapQuieroSerParte(_ sender: Any) {
-    }
-    
+
     /*
     // MARK: - Navigation
 
