@@ -49,7 +49,7 @@
 		866683522860E56D00B97D9B /* SlidesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesResponse.swift; sourceTree = "<group>"; };
 		86668358286137D400B97D9B /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		8666835F28622D9100B97D9B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		866683612862306A00B97D9B /* ApiStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiStatusType.swift; path = "ONG-SomosMas/Controler/ApiStatusType.swift"; sourceTree = SOURCE_ROOT; };
+		866683612862306A00B97D9B /* ApiStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiStatusType.swift; path = "ONG-SomosMas/Enum/ApiStatusType.swift"; sourceTree = SOURCE_ROOT; };
 		86BA8912285A930200323B8C /* ONG-SomosMas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONG-SomosMas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BA8915285A930200323B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86BA8917285A930200323B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
