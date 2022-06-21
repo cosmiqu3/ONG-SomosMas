@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactoViewController: UIViewController {
+class ContactoViewController: BaseViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var telTextField: UITextField!
@@ -198,24 +198,6 @@ class ContactoViewController: UIViewController {
         } else {
             errorAlertMessage("Se ha producido un error al registrar contacto")
         }
-    }
-    
-    func successfulAlertMessage(_ mensaje: String) {
-        // create the alert
-        let alert = UIAlertController(title: "Éxito", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func errorAlertMessage(_ mensaje: String) {
-        // create the alert
-        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
     }
 
 }

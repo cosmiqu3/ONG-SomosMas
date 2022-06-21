@@ -119,7 +119,7 @@ class ONGServiceAPIRest {
     }
     
     //MARK: Method
-    func testimonials(complete : @escaping (_ status: Int, _ response : TestimonialsResponse?) -> ()) {
+    func testimonials(complete : @escaping (_ status: APIStatusType, _ response : TestimonialsResponse?, _ message: String?) -> ()) {
         
         AF.request("\(url_base)/testimonials").response { response in
             
@@ -127,12 +127,12 @@ class ONGServiceAPIRest {
             debugPrint(response)
             
             if response.error != nil {
-                complete(1,nil)
+                complete(.api_call_error, nil, nil)
                 return
             }
 
             guard let data = response.data else {
-                complete(2,nil)
+                complete(.no_data, nil, nil)
                 return
             }
             
@@ -144,16 +144,16 @@ class ONGServiceAPIRest {
                 print("data   : \(testimonialsResponse.data)")
                 
                 if (testimonialsResponse.success ?? false) {
-                    complete(0, testimonialsResponse)
+                    complete(.success, testimonialsResponse, testimonialsResponse.message)
                     return
                 } else {
-                    complete(-1,nil)
+                    complete(.unsuccessfully,nil, testimonialsResponse.message)
                     return
                 }
                
             } catch let error {
                 print(error)
-                complete(3, nil)
+                complete(.error_processing_content, nil, nil)
                 return
             }
          }
