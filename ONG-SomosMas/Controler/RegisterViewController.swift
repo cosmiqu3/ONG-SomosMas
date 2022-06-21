@@ -90,13 +90,13 @@ class RegisterViewController: BaseViewController {
         didBackLogin()
     }
     
-    func didGetUserRegister(code: Int, messsage: String) {
+    func didGetUserRegister(status: APIStatusType, messsage: String) {
         
         print("Callback didGetUserRegister")
-        print("code    : \(code)")
+        print("code    : \(status)")
         print("messsage: \(messsage)")
         
-        if code == 0 {
+        if status == .success {
             successfulAlertMessage(messsage, complete: didBackLogin)
         } else {
             changeStateRegisterButton(true)

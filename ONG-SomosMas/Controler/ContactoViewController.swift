@@ -190,10 +190,10 @@ class ContactoViewController: BaseViewController {
         api.Contacts(nombre: "Juan", correo: "ju01@gmail.com", telefono: "123456", mensaje: "ok", complete: didGetContacts)
     }
     
-    func didGetContacts(_ status: Int, _ response : ContactsResponse?) {
+    func didGetContacts(_ status: APIStatusType, _ response : ContactsResponse?) {
         print("Callback didGetContacts")
         print("status    : \(status)")
-        if status == 0 {
+        if status == .success {
             successfulAlertMessage(response?.message ?? "")
         } else {
             errorAlertMessage("Se ha producido un error al registrar contacto")

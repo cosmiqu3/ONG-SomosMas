@@ -21,7 +21,7 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
     }
     
     func setup() {
-        
+        activityIndicator.startAnimating()
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
         api.testimonials(complete: didGetTestimonials)
@@ -62,6 +62,9 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
             testimonialsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
             
             testimonialsTableView.reloadData()
+            
+            activityIndicator.stopAnimating()
+            
         } else {
             errorAlertMessage("Error al obtener la lista de Testimonios")
         }

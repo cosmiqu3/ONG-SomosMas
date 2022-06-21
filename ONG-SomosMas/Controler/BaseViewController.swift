@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIImageView {
+    
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
@@ -21,10 +22,35 @@ extension UIImageView {
     }
 }
 
+extension UIImage {
+
+    class func createImageWithLabelOverlay(label: UILabel,imageSize: CGSize, image: UIImage) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize.width, height: imageSize.height), false, 2.0)
+        let currentView = UIView.init(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+        let currentImage = UIImageView.init(image: image)
+        currentImage.frame = CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height)
+        currentView.addSubview(currentImage)
+        currentView.addSubview(label)
+        currentView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
+    }
+
+}
+
 class BaseViewController: UIViewController {
+    
+    var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (UIScreen.main.bounds.width-40)/2, y: (UIScreen.main.bounds.height-40)/2, width: 40, height: 40))
+        
+        activityIndicator.transform = CGAffineTransform(scaleX: 2, y: 2)
+        activityIndicator.color = .darkGray
+        view.addSubview(activityIndicator)
 
         // Do any additional setup after loading the view.
     }
@@ -78,5 +104,4 @@ class BaseViewController: UIViewController {
             alpha: CGFloat(1.0)
         )
     }
-    
 }
