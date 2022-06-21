@@ -838,11 +838,11 @@
                     <tabBarItem key="tabBarItem" title="Contactanos" image="paperplane" catalog="system" id="SG6-Z1-wFw"/>
                     <navigationItem key="navigationItem" id="lnk-l1-aPO"/>
                     <connections>
-                        <outlet property="emailTextField" destination="mzu-vw-Vhb" id="4pF-lD-xqh"/>
+                        <outlet property="emailErrorLabel" destination="6Hz-qc-An7" id="o61-HR-a9j"/>
+                        <outlet property="emailTextField" destination="mzu-vw-Vhb" id="Z64-UA-Vce"/>
                         <outlet property="enviarButton" destination="G7K-eb-gbf" id="c8P-wC-0O0"/>
-                        <outlet property="mailErrorLabel" destination="6Hz-qc-An7" id="D0p-HM-7ck"/>
-                        <outlet property="mensageTextField" destination="CiF-P3-dYg" id="qK3-p6-aBh"/>
-                        <outlet property="messageErrorLabel" destination="Ifd-IP-IlU" id="RQo-xZ-XKi"/>
+                        <outlet property="messageErrorLabel" destination="Ifd-IP-IlU" id="o39-FZ-PfP"/>
+                        <outlet property="messageTextField" destination="CiF-P3-dYg" id="xl6-S9-mRe"/>
                         <outlet property="nameErrorLabel" destination="h3L-cj-dku" id="eDf-q9-8ln"/>
                         <outlet property="nameTextField" destination="DD2-NG-EVN" id="dTC-gt-2KD"/>
                         <outlet property="telErrorLabel" destination="Wzf-kd-Zcr" id="sNn-96-iEm"/>

@@ -14,11 +14,11 @@ class ContactoViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     //Estilo
-    @IBOutlet weak var mensageTextField: UITextField!{
+    @IBOutlet weak var messageTextField: UITextField!{
         didSet{
-            var frame: CGRect = mensageTextField.frame
+            var frame: CGRect = messageTextField.frame
                 frame.size.height = 100
-            mensageTextField.frame = frame
+            messageTextField.frame = frame
             
         }
     }
@@ -37,7 +37,7 @@ class ContactoViewController: BaseViewController {
     @IBOutlet weak var nameErrorLabel: UILabel!
     
     @IBOutlet weak var telErrorLabel: UILabel!
-    @IBOutlet weak var mailErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
     
     @IBOutlet weak var messageErrorLabel: UILabel!
     
@@ -57,17 +57,17 @@ class ContactoViewController: BaseViewController {
         enviarButton.isEnabled = false
         nameErrorLabel.isHidden = true
         telErrorLabel.isHidden = true
-        mailErrorLabel.isHidden = true
+        emailErrorLabel.isHidden = true
         messageErrorLabel.isHidden = true
         
         nameErrorLabel.text = "Requerido"
         telErrorLabel.text = "Requerido"
-        mailErrorLabel.text = "Requerido"
+        emailErrorLabel.text = "Requerido"
         messageErrorLabel.text = "Requerido"
         
         nameErrorLabel.text = ""
         telErrorLabel.text = ""
-        mailErrorLabel.text = ""
+        emailErrorLabel.text = ""
         messageErrorLabel.text = ""
         
         
@@ -103,10 +103,10 @@ class ContactoViewController: BaseViewController {
     @IBAction func mailTextField(_ sender: Any) {
         if let mail = emailTextField.text {
             if let errorMessage = invalidoMail(mail){
-                mailErrorLabel.text = errorMessage
-                mailErrorLabel.isHidden = false
+                emailErrorLabel.text = errorMessage
+                emailErrorLabel.isHidden = false
             }else {
-                mailErrorLabel.isHidden = true
+                emailErrorLabel.isHidden = true
             }
             
         }
@@ -115,7 +115,7 @@ class ContactoViewController: BaseViewController {
     
     @IBAction func messageTextField(_ sender: Any) {
         
-        if let mensage = mensageTextField.text {
+        if let mensage = messageTextField.text {
             if let errorMessage = invalidoMensaje(mensage){
                 messageErrorLabel.text = errorMessage
                 messageErrorLabel.isHidden = false
@@ -128,9 +128,6 @@ class ContactoViewController: BaseViewController {
     }
     
     
-    @IBAction func sendAccion(_ sender: Any) {
-        bloqueoButton()
-    }
     
     func invalidoMail(_ value: String) ->String?{
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -177,7 +174,7 @@ class ContactoViewController: BaseViewController {
     }
     
     func checForValidForm(){
-        if nameErrorLabel.isHidden && telErrorLabel.isHidden && mailErrorLabel.isHidden && messageErrorLabel.isHidden {
+        if nameErrorLabel.isHidden && telErrorLabel.isHidden && emailErrorLabel.isHidden && messageErrorLabel.isHidden {
             enviarButton.isEnabled = true
         }else {
             enviarButton.isEnabled = false
@@ -185,11 +182,63 @@ class ContactoViewController: BaseViewController {
     }
     
     
+    @IBAction func sendAccion(_ sender: Any) {
+        
+        
+       if let nombre = nameTextField.text,
+        let correo = emailTextField.text,
+        let telefono = telTextField.text,
+        let mensaje = messageTextField.text{
+        
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
+        api.Contacts(nombre: nombre,
+                     correo: correo,
+                     telefono: telefono,
+                     mensaje: mensaje,
+                     complete: didGetContacts)
+           
+           vaciarCampos()
+           
+       } else {
+           bloqueoButton()
+       }
+    }
+    
+    func didGetContacts(_ status: APIStatusType, _ response : ContactsResponse?) {
+            print("Callback didGetContacts")
+            print("status    : \(status)")
+            if status == .success {
+                successfulAlertMessage(response?.message ?? "")
+            } else {
+                errorAlertMessage("Se ha producido un error al registrar contacto")
+            }
+        }
+        
+    override func successfulAlertMessage(_ mensaje: String) {
+            // create the alert
+            let alert = UIAlertController(title: "Éxito", message: "Tus datos se han guardado exitosamente", preferredStyle: .alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    override func errorAlertMessage(_ mensaje: String) {
+            // create the alert
+            let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     
     
-    
-    
-    
+    func vaciarCampos(){
+        nameTextField.text = ""
+        telTextField.text = ""
+        emailTextField.text = ""
+        messageTextField.text = ""
+    }
     
  
     
