@@ -10,6 +10,7 @@ import UIKit
 class RegisterViewController: BaseViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameErrorLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,6 +28,20 @@ class RegisterViewController: BaseViewController {
         restarForm()
 
     }
+    
+    @IBAction func nameChange(_ sender: Any) {
+        if let name = nameTextField.text{
+            if let errorMessage = invalidoName(name){
+                nameErrorLabel.text = errorMessage
+                nameErrorLabel.isHidden = false
+            }else {
+                nameErrorLabel.isHidden = true
+            }
+            
+        }
+        checkValidForm()
+    }
+    
     @IBAction func emailChanged(_ sender: Any) {
         if let email = emailTextField.text {
             
@@ -130,6 +145,7 @@ class RegisterViewController: BaseViewController {
         passwordStatus = false
         repeatPasswordStatus = false
         
+        nameErrorLabel.isHidden = true
         emailErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
         repeatPasswordErrorLabel.isHidden = true
@@ -151,6 +167,15 @@ class RegisterViewController: BaseViewController {
         }else {
             changeStateRegisterButton(false)
         }
+    }
+    func invalidoName(_ value: String) ->String?{
+       
+       
+        if value == ""{
+            return "Favor ingrese Nombre y Apellido"
+        }
+        
+        return nil
     }
     
     func invalidEmail(_ value: String) -> String? {
