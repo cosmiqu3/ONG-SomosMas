@@ -24,15 +24,9 @@ class NewsViewController: BaseViewController {
     
     var thisImage = 0
     
-    let arrayImages = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4"), UIImage(named: "5")]
+    let arrayImages = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4")]
     
-    var newsList: [News] = [
-        News(name: "Noticia 1", content: "Descripción 1", image: "1"),
-        News(name: "Noticia 2", content: "Descripción 2", image: "2"),
-        News(name: "Noticia 3", content: "Descripción 3", image: "3"),
-        News(name: "Noticia 4", content: "Descripción 4", image: "4"),
-        News(name: "Noticia 5", content: "Descripción 5", image: "5")
-    ]
+    var newsList: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +36,15 @@ class NewsViewController: BaseViewController {
     }
     
     func setup() {
+        
+        activityIndicator.startAnimating()
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
         
         api.news(complete: didGetNews)
         
         photoImageView.image = arrayImages[thisImage]
-        nameNewsLabel.text = newsList[thisImage].name
-        descriptionNewsLabel.text = newsList[thisImage].content
-        leftButton.isEnabled = false
+//        nameNewsLabel.text = newsList[thisImage].name
+//        descriptionNewsLabel.text = newsList[thisImage].content
         
         paginationPageControl.currentPage = 0
     }
@@ -68,55 +63,63 @@ class NewsViewController: BaseViewController {
                 return
             }
             
+            var cantidad: Int = 0
             response?.data.forEach{ news in
+               
+                if cantidad < 4 {
+                    
+                    if news.id == 2091 || news.id == 2092 || news.id == 2144 || news.id == 2145 {
+                        cantidad += 1
+                        newsList.append( News(name: news.name, content: news.content, image: news.image ?? "") )
+                    }
+                }
                 print("add element to news list")
                 print("name: \(news.name)")
                 print("description: \(news.content)")
                 print("photo: \(news.image)")
                 print("")
-                newsList.append(News(name: news.name, content: news.content, image: news.image ?? ""))
-                
-                //newsList[0].
-                
+
                 print("cantidad de elementos de news list: \(newsList.count)")
+             
             }
             
             // cargar slider
+            nameNewsLabel.text = newsList[thisImage].name
+            descriptionNewsLabel.text = newsList[thisImage].content
 
         } else {
             errorAlertMessage("Error al obtener la lista de Novedades")
         }
+        activityIndicator.stopAnimating()
     }
     
     @IBAction func onTapLeftButton(_ sender: Any) {
         
-        thisImage = thisImage - 1
-        if thisImage >= 0 {
-            photoImageView.image = arrayImages[thisImage]
-        }else {
-            leftButton.isEnabled = false
-        }
-        if thisImage < 0 {
-            thisImage = 0
-        }
+        thisImage -= 1
         
+        print("thisImage sub: \(thisImage)")
+        
+        if thisImage < 0 {
+            thisImage = arrayImages.count - 1
+        }
+        photoImageView.image = arrayImages[thisImage]
+
         nameNewsLabel.text = newsList[thisImage].name
         descriptionNewsLabel.text = newsList[thisImage].content
-        
         paginationPageControl.currentPage = thisImage
     }
     
     
     @IBAction func onTapRightButton(_ sender: Any) {
+
+        thisImage += 1
+        print("thisImage add: \(thisImage)")
         
-        leftButton.isEnabled = true
-        thisImage = thisImage + 1
-        if thisImage < arrayImages.count{
-            photoImageView.image = arrayImages[thisImage]
-        }else {
+        if thisImage >= arrayImages.count {
             thisImage = 0
-            photoImageView.image = arrayImages[thisImage]
         }
+        
+        photoImageView.image = arrayImages[thisImage]
         nameNewsLabel.text = newsList[thisImage].name
         descriptionNewsLabel.text = newsList[thisImage].content
         
