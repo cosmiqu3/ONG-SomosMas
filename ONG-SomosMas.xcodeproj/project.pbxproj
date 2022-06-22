@@ -32,6 +32,8 @@
 		86CF962F28623E7C00F08878 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF962E28623E7C00F08878 /* BaseViewController.swift */; };
 		86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */; };
 		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
+		86F825B72862B46A009F0B85 /* CeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F825B62862B469009F0B85 /* CeldaCollectionViewCell.swift */; };
+		86F825B92862BD69009F0B85 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F825B82862BD69009F0B85 /* Staff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		86CF962E28623E7C00F08878 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONGServiceAPIRest.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
+		86F825B62862B469009F0B85 /* CeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCollectionViewCell.swift; sourceTree = "<group>"; };
+		86F825B82862BD69009F0B85 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */,
+				86F825B62862B469009F0B85 /* CeldaCollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			children = (
 				86668329285E65F500B97D9B /* Testimonial.swift */,
 				8666835D286141FE00B97D9B /* News.swift */,
+				86F825B82862BD69009F0B85 /* Staff.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */,
+				86F825B92862BD69009F0B85 /* Staff.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
 				8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
@@ -320,6 +327,7 @@
 				862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */,
 				8666832A285E65F500B97D9B /* Testimonial.swift in Sources */,
 				866683532860E56E00B97D9B /* SlidesResponse.swift in Sources */,
+				86F825B72862B46A009F0B85 /* CeldaCollectionViewCell.swift in Sources */,
 				8666835C2861418100B97D9B /* ContactsResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
 				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,

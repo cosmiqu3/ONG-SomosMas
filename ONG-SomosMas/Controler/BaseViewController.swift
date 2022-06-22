@@ -105,7 +105,9 @@ class BaseViewController: UIViewController {
         )
     }
     
-    func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
+   
+    func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint, letra: Int) -> UIImage {
+      
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
 
@@ -116,7 +118,7 @@ class BaseViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
 
-        let attrs = [NSAttributedString.Key.font: UIFont(name: "Helvetica Bold", size: 4)!,NSAttributedString.Key.foregroundColor : UIColor.white , NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let attrs = [NSAttributedString.Key.font: UIFont(name: "Helvetica Bold", size: CGFloat(letra))!,NSAttributedString.Key.foregroundColor : UIColor.white , NSAttributedString.Key.paragraphStyle: paragraphStyle]
 
         text.draw(with: rect, options: .usesLineFragmentOrigin, attributes: attrs, context: nil)
 
