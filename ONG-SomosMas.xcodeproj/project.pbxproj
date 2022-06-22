@@ -10,6 +10,8 @@
 		838802A80E82850C594BD6B1 /* Pods_ONG_SomosMas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393792DA5E98B4FAE5C09F8 /* Pods_ONG_SomosMas.framework */; };
 		862F5609285BB979002E7CDC /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F5608285BB979002E7CDC /* ContactoViewController.swift */; };
 		862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */; };
+		863BFCE02862EE2C0004A69F /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BFCDF2862EE2C0004A69F /* Staff.swift */; };
+		863BFCE22862EE890004A69F /* CeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BFCE12862EE890004A69F /* CeldaCollectionViewCell.swift */; };
 		86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598087285CCC8E00D30573 /* LoginViewController.swift */; };
 		8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */; };
 		8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808D285CCDA900D30573 /* NewsResponse.swift */; };
@@ -39,6 +41,8 @@
 		5C33546CC3503DC4B46E4F89 /* Pods-ONG-SomosMas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.debug.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.debug.xcconfig"; sourceTree = "<group>"; };
 		862F5608285BB979002E7CDC /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		863BFCDF2862EE2C0004A69F /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		863BFCE12862EE890004A69F /* CeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCollectionViewCell.swift; sourceTree = "<group>"; };
 		86598087285CCC8E00D30573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsResponse.swift; sourceTree = "<group>"; };
 		8659808D285CCDA900D30573 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8666832B285E665100B97D9B /* TestimonialsTableViewCell.swift */,
+				863BFCE12862EE890004A69F /* CeldaCollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			children = (
 				86668329285E65F500B97D9B /* Testimonial.swift */,
 				8666835D286141FE00B97D9B /* News.swift */,
+				863BFCDF2862EE2C0004A69F /* Staff.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			files = (
 				86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */,
 				86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */,
+				863BFCE02862EE2C0004A69F /* Staff.swift in Sources */,
 				8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */,
 				86BA891A285A930200323B8C /* ViewController.swift in Sources */,
 				86BA8916285A930200323B8C /* AppDelegate.swift in Sources */,
@@ -328,6 +335,7 @@
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
 				86CF962D28623E2800F08878 /* APIStatusType.swift in Sources */,
 				86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */,
+				863BFCE22862EE890004A69F /* CeldaCollectionViewCell.swift in Sources */,
 				8666832C285E665100B97D9B /* TestimonialsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
