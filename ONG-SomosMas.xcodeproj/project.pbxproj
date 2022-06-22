@@ -12,6 +12,7 @@
 		862F560B285BBBA2002E7CDC /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */; };
 		863BFCE02862EE2C0004A69F /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BFCDF2862EE2C0004A69F /* Staff.swift */; };
 		863BFCE22862EE890004A69F /* CeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BFCE12862EE890004A69F /* CeldaCollectionViewCell.swift */; };
+		864AA3622863C1FE004C50DA /* Slides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AA3612863C1FE004C50DA /* Slides.swift */; };
 		86598088285CCC8E00D30573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86598087285CCC8E00D30573 /* LoginViewController.swift */; };
 		8659808C285CCD8F00D30573 /* TestimonialsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */; };
 		8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659808D285CCDA900D30573 /* NewsResponse.swift */; };
@@ -43,6 +44,7 @@
 		862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		863BFCDF2862EE2C0004A69F /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		863BFCE12862EE890004A69F /* CeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCollectionViewCell.swift; sourceTree = "<group>"; };
+		864AA3612863C1FE004C50DA /* Slides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slides.swift; sourceTree = "<group>"; };
 		86598087285CCC8E00D30573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8659808B285CCD8F00D30573 /* TestimonialsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsResponse.swift; sourceTree = "<group>"; };
 		8659808D285CCDA900D30573 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				86668329285E65F500B97D9B /* Testimonial.swift */,
 				8666835D286141FE00B97D9B /* News.swift */,
 				863BFCDF2862EE2C0004A69F /* Staff.swift */,
+				864AA3612863C1FE004C50DA /* Slides.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				8666835E286141FE00B97D9B /* News.swift in Sources */,
 				8666832E285E674800B97D9B /* StaffViewController.swift in Sources */,
 				86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */,
+				864AA3622863C1FE004C50DA /* Slides.swift in Sources */,
 				86CF962D28623E2800F08878 /* APIStatusType.swift in Sources */,
 				86668330285E9B6300B97D9B /* NewsViewController.swift in Sources */,
 				863BFCE22862EE890004A69F /* CeldaCollectionViewCell.swift in Sources */,
