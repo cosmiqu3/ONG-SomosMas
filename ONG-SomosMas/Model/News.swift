@@ -12,6 +12,7 @@ struct News: Hashable {
     var name: String
     var content: String
     var image: String
+    var data: Data
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)

@@ -23,8 +23,6 @@ class NewsViewController: BaseViewController {
     
     var thisImage = 0
     
-    let arrayImages = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4")]
-    
     var newsList: [News] = []
     
     override func viewDidLoad() {
@@ -38,13 +36,7 @@ class NewsViewController: BaseViewController {
         
         activityIndicator.startAnimating()
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
-        
         api.news(complete: didGetNews)
-        
-      //  photoImageView.image = arrayImages[thisImage]
-//        nameNewsLabel.text = newsList[thisImage].name
-//        descriptionNewsLabel.text = newsList[thisImage].content
-        
         paginationPageControl.currentPage = 0
     }
     
@@ -67,9 +59,18 @@ class NewsViewController: BaseViewController {
                
                 if cantidad < 4 {
                     
-                    if news.id == 2091 || news.id == 2092 || news.id == 2144 || news.id == 2145 {
-                        cantidad += 1
-                        newsList.append( News(name: news.name, content: news.content, image: news.image ?? "") )
+                    if news.id == 2091 || news.id == 2092 || news.id == 2144 || news.id == 2151 {
+                        
+                        if let personImage = news.image {
+                            let urlImage = URL(string: personImage)
+                            if urlImage != nil {
+                                if let imageData = try? Data(contentsOf: urlImage!) {
+                                    newsList.append( News(name: news.name, content: news.content, image: personImage, data: imageData) )
+                                    cantidad += 1
+
+                                }
+                            }
+                        }
                     }
                 }
                 print("add element to news list")
@@ -85,7 +86,10 @@ class NewsViewController: BaseViewController {
             // cargar slider
             nameNewsLabel.text = newsList[thisImage].name
             descriptionNewsLabel.text = newsList[thisImage].content
-            photoImageView.image = arrayImages[thisImage]
+            
+            if let loadedImage = UIImage(data: newsList[thisImage].data) {
+                photoImageView.image = loadedImage
+            }
 
         } else {
             errorAlertMessage("Error al obtener la lista de Novedades")
@@ -100,9 +104,11 @@ class NewsViewController: BaseViewController {
         print("thisImage sub: \(thisImage)")
         
         if thisImage < 0 {
-            thisImage = arrayImages.count - 1
+            thisImage = newsList.count - 1
         }
-        photoImageView.image = arrayImages[thisImage]
+        if let loadedImage = UIImage(data: newsList[thisImage].data) {
+            photoImageView.image = loadedImage
+        }
 
         nameNewsLabel.text = newsList[thisImage].name
         descriptionNewsLabel.text = newsList[thisImage].content
@@ -115,11 +121,13 @@ class NewsViewController: BaseViewController {
         thisImage += 1
         print("thisImage add: \(thisImage)")
         
-        if thisImage >= arrayImages.count {
+        if thisImage >= newsList.count {
             thisImage = 0
         }
         
-        photoImageView.image = arrayImages[thisImage]
+        if let loadedImage = UIImage(data: newsList[thisImage].data) {
+            photoImageView.image = loadedImage
+        }
         nameNewsLabel.text = newsList[thisImage].name
         descriptionNewsLabel.text = newsList[thisImage].content
         
@@ -131,7 +139,9 @@ class NewsViewController: BaseViewController {
         
         let indexImage = paginationPageControl.currentPage
         
-        photoImageView.image = arrayImages[indexImage]
+        if let loadedImage = UIImage(data: newsList[thisImage].data) {
+            photoImageView.image = loadedImage
+        }
         nameNewsLabel.text = newsList[indexImage].name
         descriptionNewsLabel.text = newsList[indexImage].content
     }
