@@ -17,8 +17,10 @@ class TestimonialsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        print("awakeFromNib")
+        photoImageView.layer.cornerRadius = 50
+        photoImageView.layer.masksToBounds = true
+      }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

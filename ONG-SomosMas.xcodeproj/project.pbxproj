@@ -157,10 +157,10 @@
 		86D7374E285A977000D03423 /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				86598087285CCC8E00D30573 /* LoginViewController.swift */,
 				862F560A285BBBA2002E7CDC /* WelcomePageViewController.swift */,
 				862F5608285BB979002E7CDC /* ContactoViewController.swift */,
 				86CE622D285BDE7B00E7D48B /* RegisterViewController.swift */,
-				86598087285CCC8E00D30573 /* LoginViewController.swift */,
 				86598091285CCF1A00D30573 /* TestimonialsViewController.swift */,
 				8666832D285E674800B97D9B /* StaffViewController.swift */,
 				8666832F285E9B6300B97D9B /* NewsViewController.swift */,
