@@ -12,20 +12,16 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
     var testimonialList: [Testimonial] = []
     
     @IBOutlet weak var testimonialsTableView: UITableView!
-   
+    
     func getTestimonialByIndex ( index: Set<Testimonial>.Index) -> Testimonial {
         testimonialList[0]
     }
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setup()
-        
     }
     
     func setup() {
@@ -34,12 +30,6 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
         let api: ONGServiceAPIRest = ONGServiceAPIRest()
         api.testimonials(complete: didGetTestimonials)
     }
-    
-    
-    @IBAction func onTapAgregarTestimonio(_ sender: Any) {
-    }
-    
-    
     
     func didGetTestimonials(_ status: APIStatusType, _ response : TestimonialsResponse?, message: String?) {
             print("Callback didGetUserTestimonials")
@@ -100,24 +90,5 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
         celda.backgroundColor = getUIColor(hex: "FFFCDD", alpha: 0.5)
  
         return celda
-        
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 120
-//    }
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
