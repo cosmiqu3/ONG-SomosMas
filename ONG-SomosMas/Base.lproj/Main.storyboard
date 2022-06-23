@@ -27,7 +27,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onTapLogin:" destination="p6z-Km-1cN" eventType="touchUpInside" id="KgF-GP-dJz"/>
-                                    <segue destination="QS1-BO-HPp" kind="show" identifier="segueLoginOk" id="WvO-Ig-K5v"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaB-Fx-9VB">
@@ -105,6 +104,7 @@
                         <outlet property="okLabel" destination="3ho-h2-1hT" id="sbW-wx-GpE"/>
                         <outlet property="passwordErrorLabel" destination="KK4-2f-6VE" id="E6I-mE-lX1"/>
                         <outlet property="passwordTextField" destination="bid-jd-ezK" id="7pI-Ce-ENQ"/>
+                        <segue destination="QS1-BO-HPp" kind="show" identifier="segueLoginOk" id="c5s-u8-SGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKn-7O-bcA" sceneMemberID="firstResponder"/>
