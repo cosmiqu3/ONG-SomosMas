@@ -49,13 +49,18 @@ class LoginViewController: BaseViewController {
         print("Callback didGetUserLogin")
         print("code    : \(status)")
         if status == .success {
-            self.performSegue(withIdentifier: "segueLoginOk", sender: nil)
-            successfulAlertMessage("Autentificación éxitosa")
+            activityIndicator.stopAnimating()
+            successfulAlertMessage("Autentificación éxitosa", complete: didGoToBienvenidos)
         } else {
+            activityIndicator.stopAnimating()
             self.okLabel.text = response?.error ?? ""
             errorAlertMessage("Credenciales incorrectas")
         }
-        activityIndicator.stopAnimating()
+    }
+    
+    func didGoToBienvenidos() {
+        print("Callback didGoToBienvenidos")
+        self.performSegue(withIdentifier: "segueLoginOk", sender: nil)
     }
     
     @IBAction func emailChanged(_ sender: Any) {
