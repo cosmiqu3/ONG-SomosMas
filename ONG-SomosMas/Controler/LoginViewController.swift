@@ -6,20 +6,55 @@
 //
 
 import UIKit
-
+import Alamofire
 class LoginViewController: BaseViewController {
+
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var okLabel: UILabel!
     
     @IBOutlet weak var LoginButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bloqueoButton()
+    }
+    
+    func setLogin(){
+        let email = emailTextField.text ?? ""
+        let pass = passwordTextField.text ?? ""
+        
+        getLogin(email: email, password: pass)
+    }
     
     
+    @IBAction func onClick(_ sender: UIButton) {
+        setLogin()
+    }
     
+    func getLogin(email: String, password: String){
+        
+        let api: ONGServiceAPIRest = ONGServiceAPIRest()
+        
+        activityIndicator.startAnimating()
+            
+        api.login(email: email, password: password, complete: didGetUserLogin)
+
+    }
     
+    func didGetUserLogin(_ status : APIStatusType, _ response: LoginResponse?) {
+        print("Callback didGetUserLogin")
+        print("code    : \(status)")
+        if status == .success {
+            self.performSegue(withIdentifier: "segueLoginOk", sender: nil)
+        } else {
+            self.okLabel.text = response?.error ?? ""
+        }
+        activityIndicator.stopAnimating()
+    }
     
     @IBAction func emailChanged(_ sender: Any) {
         if let email = emailTextField.text {
@@ -38,14 +73,10 @@ class LoginViewController: BaseViewController {
     
     
     @IBAction func onTapLogin(_ sender: Any) {
-        
         bloqueoButton()
-        
     }
     
-    
     @IBAction func passChanged(_ sender: Any) {
-        
         if let name = passwordTextField.text{
             if let errorMessage = invalidoPass(name){
                 passwordErrorLabel.text = errorMessage
@@ -67,9 +98,6 @@ class LoginViewController: BaseViewController {
     
  
     func bloqueoButton(){
-        
-//        LoginButton.isEnabled = false
-       
         emailErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
         
@@ -79,8 +107,6 @@ class LoginViewController: BaseViewController {
         emailErrorLabel.text = ""
         passwordErrorLabel.text = ""
     }
-    
-
     
     func checForValidForm(){
         if emailErrorLabel.isHidden && passwordErrorLabel.isHidden {
@@ -98,21 +124,4 @@ class LoginViewController: BaseViewController {
         }
         return nil
     }
-    
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        bloqueoButton()
-    }
-    
-
-   
-    
-    
-    
-    
-    
-
 }

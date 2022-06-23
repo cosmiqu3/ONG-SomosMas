@@ -35,6 +35,7 @@
 		86CF962F28623E7C00F08878 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF962E28623E7C00F08878 /* BaseViewController.swift */; };
 		86D73741285A95F500D03423 /* ONGServiceAPIRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */; };
 		86D73747285A96B000D03423 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D73746285A96B000D03423 /* RegistryResponse.swift */; };
+		86F4330F28640AE30094F641 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4330E28640AE30094F641 /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		86CF962E28623E7C00F08878 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86D73740285A95F500D03423 /* ONGServiceAPIRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONGServiceAPIRest.swift; sourceTree = "<group>"; };
 		86D73746285A96B000D03423 /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
+		86F4330E28640AE30094F641 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		89DE1FE473F88AACF3900731 /* Pods-ONG-SomosMas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONG-SomosMas.release.xcconfig"; path = "Target Support Files/Pods-ONG-SomosMas/Pods-ONG-SomosMas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				8659808D285CCDA900D30573 /* NewsResponse.swift */,
 				866683522860E56D00B97D9B /* SlidesResponse.swift */,
 				8666835B2861418100B97D9B /* ContactsResponse.swift */,
+				86F4330E28640AE30094F641 /* LoginResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				8666832A285E65F500B97D9B /* Testimonial.swift in Sources */,
 				866683532860E56E00B97D9B /* SlidesResponse.swift in Sources */,
 				8666835C2861418100B97D9B /* ContactsResponse.swift in Sources */,
+				86F4330F28640AE30094F641 /* LoginResponse.swift in Sources */,
 				86BA8918285A930200323B8C /* SceneDelegate.swift in Sources */,
 				8659808E285CCDAA00D30573 /* NewsResponse.swift in Sources */,
 				8666835E286141FE00B97D9B /* News.swift in Sources */,

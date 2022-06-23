@@ -26,7 +26,7 @@
                                     <color key="baseBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onTapLogin:" destination="p6z-Km-1cN" eventType="touchUpInside" id="HHS-FF-tsX"/>
+                                    <action selector="onTapLogin:" destination="p6z-Km-1cN" eventType="touchUpInside" id="KgF-GP-dJz"/>
                                     <segue destination="QS1-BO-HPp" kind="show" id="WvO-Ig-K5v"/>
                                 </connections>
                             </button>
@@ -45,7 +45,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pW8-MM-lmJ" kind="show" id="iQf-pM-NzA"/>
+                                    <segue destination="pW8-MM-lmJ" kind="show" identifier="segueLoginOk" id="iQf-pM-NzA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="qOh-7u-kON">

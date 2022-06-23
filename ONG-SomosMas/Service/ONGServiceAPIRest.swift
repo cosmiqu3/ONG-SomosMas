@@ -65,6 +65,57 @@ class ONGServiceAPIRest {
          }
     }
     
+    //MARK: Method Login
+    func login(email: String, password: String, complete : @escaping (_ status : APIStatusType, _ response: LoginResponse?) -> ()) {
+        
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        
+        let parameters: [String: String] = [
+            "email": email,
+            "password": password
+        ]
+        
+        AF.request("\(url_base)/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers).response { response in
+            
+            print ("response:")
+            debugPrint(response)
+            
+            if response.error != nil {
+                complete(.api_call_error,  nil)
+                return
+            }
+
+            guard let data = response.data else {
+                complete(.no_data, nil)
+                return
+            }
+            
+            do {
+                let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+                print("*** resultado ***\n")
+                print("success: \(loginResponse.success ?? false)")
+                print("message: \(loginResponse.message)")
+                print("errors : \(loginResponse.error)")
+                print("data   : \(loginResponse.data)")
+                
+                if (loginResponse.success ?? false) {
+                    complete(.success, loginResponse)
+                    return
+                } else {
+                    complete(.unsuccessfully,nil)
+                    return
+                }
+               
+            } catch let error {
+                print(error)
+                complete(.error_processing_content,nil)
+                return
+            }
+         }
+    }
+    
     //MARK: Method Contacts
     func Contacts(nombre: String, correo: String, telefono: String, mensaje: String, complete : @escaping (_ status: APIStatusType, _ response : ContactsResponse?) -> ()) {
         
