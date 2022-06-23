@@ -65,7 +65,7 @@
                                 <rect key="frame" x="29" y="523" width="354" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passChanged:" destination="p6z-Km-1cN" eventType="editingChanged" id="jYQ-sb-mc2"/>
                                     <action selector="passwordChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="SdS-ow-jB9"/>
@@ -132,7 +132,7 @@
                                 <rect key="frame" x="30" y="544" width="354" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="DrA-Ut-LjY"/>
                                 </connections>
@@ -142,7 +142,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="10" trailing="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="repeatPasswordChanged:" destination="pW8-MM-lmJ" eventType="editingChanged" id="j9H-OS-0YY"/>
                                 </connections>
