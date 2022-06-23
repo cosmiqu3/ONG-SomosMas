@@ -76,6 +76,7 @@ class LoginViewController: BaseViewController {
     
     @IBAction func onTapLogin(_ sender: Any) {
         bloqueoButton()
+        setLogin()
     }
     
     @IBAction func passChanged(_ sender: Any) {

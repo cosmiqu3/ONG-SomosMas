@@ -27,7 +27,8 @@ struct User: Codable {
     let name, email: String
     let emailVerifiedAt: String?
     let password: String
-    let roleID, groupID: Int
+    let roleID: Int
+    let groupID: Int?
     let rememberToken: Bool?
     let createdAt, updatedAt, deletedAt: String?
     let latitude, longitude: Double?
