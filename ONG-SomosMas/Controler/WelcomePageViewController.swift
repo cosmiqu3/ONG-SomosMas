@@ -9,10 +9,12 @@ import UIKit
 
 class WelcomePageViewController: BaseViewController {
 
+    
+    
     @IBOutlet weak var imageUsedUIImage: UIImageView!
-    @IBOutlet weak var nextImageButton: UIButton!
     @IBOutlet weak var nameImageLabel: UILabel!
     @IBOutlet weak var descriptionImageLabel: UILabel!
+    @IBOutlet weak var nextImageButton: UIButton!
     var thisImage = 0
     var slideList: [Slides] = []
     
