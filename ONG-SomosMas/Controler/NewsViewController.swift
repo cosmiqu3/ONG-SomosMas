@@ -12,7 +12,7 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var nameNewsLabel: UILabel!
     
     @IBOutlet weak var descriptionNewsLabel: UILabel!
-
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var paginationPageControl: UIPageControl!
@@ -20,7 +20,7 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var leftButton: UIButton!
     
     @IBOutlet weak var rightButton: UIButton!
-    
+ 
     var thisImage = 0
     
     var newsList: [News] = []
@@ -98,7 +98,6 @@ class NewsViewController: BaseViewController {
     }
     
     @IBAction func onTapLeftButton(_ sender: Any) {
-        
         thisImage -= 1
         
         print("thisImage sub: \(thisImage)")
@@ -117,7 +116,6 @@ class NewsViewController: BaseViewController {
     
     
     @IBAction func onTapRightButton(_ sender: Any) {
-
         thisImage += 1
         print("thisImage add: \(thisImage)")
         
@@ -134,19 +132,17 @@ class NewsViewController: BaseViewController {
         paginationPageControl.currentPage = thisImage
     }
     
-    
     @IBAction func onTapChangeValuePageControl(_ sender: Any) {
-        
         let indexImage = paginationPageControl.currentPage
         
-        if let loadedImage = UIImage(data: newsList[thisImage].data) {
+        if let loadedImage = UIImage(data: newsList[indexImage].data) {
             photoImageView.image = loadedImage
         }
         nameNewsLabel.text = newsList[indexImage].name
         descriptionNewsLabel.text = newsList[indexImage].content
     }
     
-    @IBAction func onTapQuieroSerParte(_ sender: Any) {
-    }
+
+    
 
 }
