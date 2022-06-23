@@ -45,7 +45,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pW8-MM-lmJ" kind="show" identifier="segueLoginOk" id="iQf-pM-NzA"/>
+                                    <segue destination="pW8-MM-lmJ" kind="show" identifier="" id="iQf-pM-NzA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGO-SOMOS MAS" translatesAutoresizingMaskIntoConstraints="NO" id="qOh-7u-kON">
@@ -86,6 +86,13 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ho-h2-1hT">
+                                <rect key="frame" x="30" y="393" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vv8-Sn-x3M"/>
                         <color key="backgroundColor" red="0.94559401269999999" green="0.94559401269999999" blue="0.94559401269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,6 +102,7 @@
                         <outlet property="LoginButton" destination="yoh-bT-EqV" id="L5y-d7-b1F"/>
                         <outlet property="emailErrorLabel" destination="NQZ-fb-3bl" id="2BN-1a-kfB"/>
                         <outlet property="emailTextField" destination="JhF-px-dxb" id="1Hy-2U-zTd"/>
+                        <outlet property="okLabel" destination="3ho-h2-1hT" id="sbW-wx-GpE"/>
                         <outlet property="passwordErrorLabel" destination="KK4-2f-6VE" id="E6I-mE-lX1"/>
                         <outlet property="passwordTextField" destination="bid-jd-ezK" id="7pI-Ce-ENQ"/>
                     </connections>

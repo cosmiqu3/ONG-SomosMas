@@ -15,9 +15,9 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordErrorLabel: UILabel!
     @IBOutlet weak var okLabel: UILabel!
-    
     @IBOutlet weak var LoginButton: UIButton!
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         bloqueoButton()
@@ -50,8 +50,10 @@ class LoginViewController: BaseViewController {
         print("code    : \(status)")
         if status == .success {
             self.performSegue(withIdentifier: "segueLoginOk", sender: nil)
+            successfulAlertMessage("Autentificación éxitosa")
         } else {
             self.okLabel.text = response?.error ?? ""
+            errorAlertMessage("Credenciales incorrectas")
         }
         activityIndicator.stopAnimating()
     }
