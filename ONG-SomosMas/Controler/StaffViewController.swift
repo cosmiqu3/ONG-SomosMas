@@ -133,13 +133,14 @@ class StaffViewController: BaseViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
-        pagePhotoPageControl.currentPage = indexPath[1]
         
-        let i = indexPath[1]
-        nameLabel.text  =  staffList[i].name
+        indexStaffImage = indexPath[1]
+        pagePhotoPageControl.currentPage = indexStaffImage
+        
+        nameLabel.text  =  staffList[indexStaffImage].name
         print(nameLabel.text)
-        rolLabel.text =  staffList[i].role
-        descriptionLabel.text = staffList[i].description
-        photoImageView.image =  UIImage(named: staffList[i].image)
+        rolLabel.text =  staffList[indexStaffImage].role
+        descriptionLabel.text = staffList[indexStaffImage].description
+        photoImageView.image =  UIImage(named: staffList[indexStaffImage].image)
     }
 }
