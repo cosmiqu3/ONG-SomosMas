@@ -55,7 +55,10 @@ class TestimonialsViewController: BaseViewController, UITableViewDataSource, UIT
                 print("description: \(tesmn.datumDescription)")
                 print("photo: \(tesmn.image)")
                 print("")
-                testimonialList.append(Testimonial(name: tesmn.name, description: tesmn.datumDescription ?? "", photo: tesmn.image))
+                
+                if tesmn.id != 520 && tesmn.id != 519 && tesmn.id != 507 {
+                    testimonialList.append(Testimonial(name: tesmn.name, description: tesmn.datumDescription ?? "", photo: tesmn.image))
+                }
             }
             testimonialsTableView.dataSource = self
             //testimonialsTableView.delegate = self
